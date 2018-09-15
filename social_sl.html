@@ -1,0 +1,715 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Соціальні служби</title>
+<link href='http://fonts.googleapis.com/css?family=Terminal+Dosis:400,700,800,600,500,300,200' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<link rel="stylesheet" type="text/css" href="css/default.css"/>
+<link rel="shortcut icon" href="icon.ico" type="image/i-icon" />
+
+<!--jquery library-->
+<script type="text/javascript" src="scripts/jquery-1.7.1.min.js"></script>
+<!--/jquery library-->
+
+<!--jquery easing-->
+<script type="text/javascript" src="scripts/jquery.easing.1.3.js"></script>
+<!--/jquery easing-->
+
+<!--nivo slider plugin for jquery-->
+<script type="text/javascript" src="scripts/nivo-slider/jquery.nivo.slider.js"></script>
+<link rel="stylesheet" type="text/css" href="scripts/nivo-slider/nivo-slider.css"/>
+<!--/nivo slider plugin for jquery-->
+
+<!--superfish dropdown-->
+<link rel="stylesheet" type="text/css" href="scripts/superfish/css/superfish.css"/>
+<script type="text/javascript" src="scripts/superfish/js/superfish.js"></script>
+<script type="text/javascript" src="scripts/superfish/js/hoverIntent.js"></script>
+<script type="text/javascript" src="scripts/superfish/js/jquery.bgiframe.min.js"></script>
+<script type="text/javascript" src="scripts/superfish/js/supersubs.js"></script>
+<!--/superfish dropdown-->
+
+<!--auto complete-->
+<script type='text/javascript' src='scripts/autocomplete/jquery.autocomplete.min.js'></script>
+<link rel="stylesheet" type="text/css" href="scripts/autocomplete/jquery.autocomplete.css" />
+<!--/auto complete-->
+
+<!--misc. scripts-->
+<script type="text/javascript" src="scripts/scripts.js"></script>
+<script type="text/javascript" src="scripts/jquery-backgroundpos/jquery.backgroundpos.pack.js"></script>
+<!--/misc. scripts-->
+
+<script type="text/javascript"> 
+    document.ondragstart = noselect; // запрет на перетаскивание
+    document.onselectstart = noselect; // запрет на выделение элементов страницы 
+    document.oncontextmenu = noselect; // запрет на выведение контекстного меню 
+    function noselect() {return false;} 
+</script>
+
+</head>
+
+<!--body-->
+<body  onmousedown="return false;" onclick="return true;">
+	<!--sliding login panel-->
+	<div id="login_panel">
+        <div id="content">
+            <div>
+                <div class="column column1">
+                    <!--help text, maybe-->
+                    <h3>Інформаційний сайт для учасників бойових дій:</h3>
+                    <p>
+                      Сайт призначений для надання інформаційної підтримки учасникам бойових дій АТО. Містить базу інформації про реабілітацію, освіту та пільги.
+                    </p>
+                    <p>
+                        Для того, щоб залишати свої коментарі та пропозиції на сайті необхідно пройти реєстрацію.  
+                    </p>                    
+                    <p>
+                        <a href="#" class="orange-only notextdecoration">Ще не зареєстровані ? Зареєструватись ?</a>
+                    </p>
+                
+                </div>
+                                
+                <div class="column column2">
+                    <!--user signin-->
+                    <h3>Вхід на сайт:</h3>
+                    <form name="contact_form" id="contact_form" class="generic-form alignleft_block" action="contact.html">
+                        <p>
+                            <input type="text" name="txt_name" id="txt_name" class="validate[required] medium-login user margin-right-10" />
+                            <input type="text" name="txt_email" id="txt_email" class="validate[required] medium-login password" />
+                        </p>
+                        <div class="clear10"></div>                                                
+                        <p>
+                            <input type="checkbox" id="chk_rememberme" name="chk_rememberme" /><label for="chk_rememberme">Запам'ятати мене</label>
+                            &nbsp;/&nbsp;
+                            <a href="#" class="orange-only notextdecoration">Нагадати пароль?</a>
+                        </p>                     
+                           
+                        <div class="clear"></div>
+                        
+                        <a href="#" class="button alignleft_block bold_only notextdecoration" id="btnLoginNow"><span>Увійти</span></a>
+
+                    </form>
+                    <!--/user login-->
+                </div>
+            </div>
+        </div>
+        <div id="signin_register">
+            <ul>
+                <li>Вітаємо на сайті!</li>
+                <li><a href="#">&nbsp;</a></li>
+            </ul>
+        </div>
+    </div>    
+    <!--/sliding login panel-->
+
+    <!--body wrapper-->
+    <div id="body-wrapper">
+    
+    	<div id="page-header-wrapper">
+    
+            <!--header container-->
+            <div id="header-contanier">
+            
+                <!--header wrapper-->
+                <div id="header" class="center-clear">
+                    
+                    <img class="banner" src="images/temp/47776.jpg" width="970" height="250" alt="banner" />
+                                
+                    <!--header place holder-->
+                    <div class="header-place-holder"></div>
+                    
+                    <!--social tabs-->
+                   <ul id="social_tabs">
+                    <li><a href="https://twitter.com/vsedopomogaATO" target="_blank"><img src="images/social_icons/t.png" width="30" height="27" alt="" /></a></li>
+                    <li><a href="https://www.facebook.com/vsedopomogaATO" target="_blank"><img src="images/social_icons/f.png" width="30" height="27" alt="" /></a></li>
+                    <li><a href="http://vk.com/vsedopomogaato" target="_blank"><img src="images/social_icons/v.png" width="30" height="27" alt="" /></a></li>
+                   </ul>
+                    <!-- /social tabs-->
+
+                    <!--menu-->
+                    <ul id="top_menu" class="sf-menu">
+                    <li><a href="index.html">Головна</a><span>Початок сайту</span></li>
+                    <li><a href="#.html">Карта</a><span>З чого потрібно почати</span>
+                        <!--first level dropdown menu-->
+                        <ul>
+                            <li><a href="maps.html">Документи</a></li>
+                            <li><a href="social_sl.html">Соціальні служби</a></li>
+                            <li><a href="famile.html">Діти сім'я</a></li>                                                         
+                        </ul>
+                        <!--/first level dropdown menu-->                        
+                    </li>
+                    <li><a href="#">Пільги</a><span>Необхідні данні</span>
+                        <!--first level dropdown menu-->
+                        <ul>
+                             <li><a href="#">Земельне законодавство</a></li>
+                             <li><a href="#">Отримання статусу</a>
+                                <!--second level dropdown menu-->
+                                <ul>
+                                    <li><a href="#">Демобілізований</a></li>            
+                                    <li><a href="#">Сім'я загиблого</a></li>
+                                </ul>
+                                 <!--/second level dropdown menu-->
+                             </li>
+                             <li><a href="#">Отримання житла</a></li>
+                             <li><a href="#">Податкове законодавство</a></li>
+                             <li><a href="#">Отримання кредитів</a></li>
+                             <li><a href="#">Виплати</a></li>                                 
+                             <li><a href="#">Юридична допомога</a></li>
+                             <li><a href="#">Волонтерські організації<br>(контакти)</a></li>                                 
+                        </ul>
+                        <!--/first level dropdown menu-->                        
+                    </li>
+                    <li><a href="#">Освіта</a><span>Що потрібно знати</span>
+                        <!--first level dropdown menu-->
+                        <ul>
+                            <li><a href="#">Закон про освіту</a></li>
+                            <li><a href="institut.html">Вищі навчальні заклади</a></li>
+                        </ul>
+                        <!--/first level dropdown menu-->                        
+                    </li>
+                    <li><a href="#">Лікування</a><span>Відпочинок</span>
+                        <!--first level dropdown menu-->
+                        <ul>
+                            <li><a href="#">Закон про лікування</a></li>
+                            <li><a href="#">Психологічна реабілітація</a></li>
+                            <li><a href="#">Санаторне лікування</a></li>
+                        </ul>
+                        <!--/first level dropdown menu-->                        
+                    </li>                                                                
+                    <li><a href="contact.html">Контакти</a><span>Необхідні контакти</span></li>
+                    <li><a href="comens.html">Kоментарі</a><span>Ваші конентарі</span></li>          
+                </ul>
+                    <!-- /menu-->
+                    
+                    <!--search box-->
+                    <div id="search_box">
+                        <form method="post" name="form_search" id="form_search" class="form_search" action="all_elements.html">
+                            <input type="text" name="txt_search" id="txt_search" class="txt_search" value="Пошук..." />
+                            <input type="submit" name="btn_search" id="btn_search" class="btn_search" value="" />
+                        </form>
+                    </div>
+                    <!-- /search box-->
+                    
+                </div>
+                <!-- /header wrapper-->
+                
+            </div>
+            <!-- /header container-->
+
+	        <div class="clear40"></div>
+                        
+            <!--side bar title and bread crumb-->
+            <div class="center-clear">
+                <div class="page-columns-head-style gray-frame page-column1 margin-right-10">
+                	<h1 class="heading h1">Додаткові матеріали:</h1>
+                </div>
+                
+                <div id="breadcrumb" class="page-columns-head-style gray-frame page-column2">
+                    <ul>
+                        <li><a href="index.html">Головна</a></li>
+                        <li><a href="#">Карта</a></li>                    
+                        <li><a href="social_sl.html" class="active">Соціальні служби</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--/side bar title and bread crumb-->
+            
+        </div>
+        <!--/page header wrapper-->
+        
+        
+        <!--page content wrapper-->
+        <div id="page-content-wrapper">        
+        
+            <!--content container-->
+          <div class="center-clear page-content-wrapper">
+                
+                <!--side bar-->
+                <div class="side_bar gray-frame page-column1 margin-right-8">
+                	<!--navigation-->
+                    <ul class="accordion page-list-menu">
+                        <li class="active"><a href="http://zakon5.rada.gov.ua/laws/show/1080-19" target="_blank
+                         ">Пенсійне забезпечення резервістів</a></li>
+                        <li><a href="http://ckp.in.ua/news/8468" target="_blank">7 податкових пільг для учасників АТО</a></li>
+                        <li><a href="http://taxlink.ua/ua/news/pilgi-uchasnikam-ato-shhodo-splati-podatkiv-ta-zboriv.htm" target="_blank">Пільги учасникам АТО щодо сплати податків</a></li>
+                        <li><a href="https://medium.com/@GeneralStaffUA/%D0%B2%D1%96%D0%B9%D1%81%D1%8C%D0%BA%D0%BE%D0%B2%D0%B0-%D1%81%D0%BB%D1%83%D0%B6%D0%B1%D0%B0-%D0%B7%D0%B0-%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%B0%D0%BA%D1%82%D0%BE%D0%BC-%D1%83-%D0%B7%D0%B1%D1%80%D0%BE%D0%B9%D0%BD%D0%B8%D1%85-%D1%81%D0%B8%D0%BB%D0%B0%D1%85-%D1%83%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B8-bbfe46406c87#.218cfs48r" target="_blank">Військова служба за контрактом у ЗСУ</a></li>
+                        <li><a href="http://npu.in.ua/ua/atoua/825-perelik-notariusiv-ukrajini-yaki-na-dobrovilnikh-zasadakh-zdijsnyuyut-bezkoshtovne-notarialne-zasvidchennya-stanom-na-15-01-2015#.Vu-PCndRGSo" target="_blank">Перелік нотаріусів які допомагають воїнам АТО</a></li>
+                        <li><a href="http://zakon4.rada.gov.ua/laws/show/1071-96-%D0%BF" target="_blank">Порядок отримання лікарських препаратів</a></li>
+                        <li><a href="https://www.facebook.com/vsedopomogaATO/posts/1156076824437284:0" target="_blank">ОБЕРЕЖНО!! Єдиний реєстр учасників АТО.</a></li>  
+                        <li><a href="https://www.facebook.com/vsedopomogaATO/posts/1155098974535069:0" target="_blank">Оскарження незаконних дій керівництва</a></li>
+                         <li><a href="http://legal100.org.ua/?page_id=1332" target="_blank">Пам'ятка військовослужбовцю</a></li>
+                         <li><a href="http://espu.org.ua/" target="_blank">Єдиний союз патріотів України</a></li>
+                         <li><a href="http://legalaid.gov.ua/ua/" target="_blank">Правова допомога</a></li>
+                         <li><a href="http://ato.vobu.com.ua/page2.ukr.html" target="_blank">Учасники АТО: статус пільги</a></li>
+                        <li><a href="http://life-after-ato.com.ua/2016/05/21/%D1%80%D0%BE%D0%B7%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%BD%D0%BE-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82-%D0%BA%D0%BE%D0%BD%D1%86%D0%B5%D0%BF%D1%86%D1%96%D1%97-%D1%80%D0%B5%D1%84%D0%BE%D1%80%D0%BC%D1%83/#more-6378" target="_blank">Життя після Ато (інформаційний сайт)</a></li>
+                        <li><a href="http://goo.gl/yAAE7R" target="_blank">Кабінет Міністрів України на житло військовим</a></li>
+                        <li><a href="http://www.softline.kiev.ua/news/769-softlajn-it-gotova-brat-na-rabotu-uchastnikov-ato.html" target="_blank">SOFTLINE IT РАБОТА УЧАСТНИКАМ АТО</a></li>
+                    </ul>
+                    
+                    <!--title-->
+                  	<h1 class="heading-with-left-margin h1">Ми їх пам'ятаємо</h1>
+					<!--/title-->   
+					
+                    <!--boxes-->
+                    <div class="alignleft_block">
+
+                      	<div class="box-125 alignleft_block first">
+                            <img src="images/temp/themeforest.jpg" width="123" height="160" alt="" />
+                        </div>
+                        
+                        <div class="box-125 alignleft_block">
+                            <img src="images/temp/codecanyon.jpg" width="123" height="160" alt="" />
+                        </div>
+    
+                        <div class="clear"></div>
+                        <div class="clear"></div>
+    
+                      	<div class="box-125 alignleft_block first no-bottom-margin">
+                            <img src="images/temp/activeden.jpg" width="123" height="160" alt="" />	
+                        </div>
+                      	
+                        <div class="box-125 alignleft_block no-bottom-margin">
+                            <img src="images/temp/tutorials.jpg" width="123" height="160" alt="" />	
+                        </div>
+
+
+                        <div class="clear"></div>
+                        <div class="clear20"></div>
+    
+                        <div class="box-125 alignleft_block first no-bottom-margin">
+                            <img src="images/temp/activeden1.jpg" width="123" height="160" alt="" /> 
+                        </div>
+                        
+                        <div class="box-125 alignleft_block no-bottom-margin">
+                            <img src="images/temp/tutorials1.jpg" width="123" height="160" alt="" /> 
+                        </div>
+					</div>
+                    <div class="clear20"></div>
+                    <div class="clear20"></div>
+					
+                    <div class="splitter-h alignleft_block"></div>
+
+                   <a href="#" class="alignleft_block">
+                        <img class="img_zoom" src="images/temp/workwithus.jpg" width="288" height="150" alt=""/>
+                    </a>
+                    <a href="#" class="alignleft_block">
+                        <img class="img_zoom" src="images/temp/workwithus1.jpg" width="288" height="150" alt=""/>
+                    </a>
+
+					<div class="clear20"></div>
+                    
+           	  	</div>
+                <!--/side bar-->
+                
+                <!--page content goes here-->
+            	<div class="page-content gray-frame">
+                    <h1 class="heading h1 margin_bottom10">Дорожня карта учасника АТО:</h1>
+                    
+                    <!--text content-->
+                    
+                    <p>
+                         Сьогодні по всій Україні, зокрема і в нашій області, багато людей є демобілізованими. Та не всі, хто повернувся додому знають як бути і що робити далі. 
+                    </p>
+                        
+                    <p><img src="images/temp/skycity4.jpg" width="300" height="350" class="gray-frame padding-5 img-margin-right-w alignleft" alt="" />
+                       Про те, як слід поводитись, і що найперше треба зробити, повернувшись додому, розказує на своїй сторінці в соціальній мережі "Фейсбук" військовий Олександр Алієв.                        
+                    </p>
+                        
+                    <p>
+                        Будь-які свої дії він радить починати з копій документів.
+                    </p>
+                    <p>
+                        "Зробіть одразу не менше 10-ти примірників всіх довідок, паперів, документів, паспорту, ідентифікаційного коду. Тільки військовий квиток можна зробити рази два і все. Також, на статус УБД просять віддати довідку про Безпосередню участь в АТО. Вона вам ще нераз знадобиться! Або робіть нотаріально завірену копію, або вимагайте працівників воєнкомату зробити копію і завірити печаткою воєнкомату", - зазначає чоловік у своєму дописі.
+                    </p>
+                    <p>
+                        Також він радить вимагати зробити копії всіх документів, оригінали яких намагаються у вас забрати. Окрім того слід обов’язково завірити їх печаткою воєнкомату та підписом.
+                    </p>
+                        
+                    <p>
+                        Автор радить демобілізованим стати до воєнкомату на облік. Якщо вже є статус УБД, то далі. Якщо УБД ще немає, пишіть заяву в якій ви прохаєте відправити запит до частини для отримання необхідної документації на отримання статусу УБД. Якщо за тридцять днів відповідь все ще не надходить, пишіть другий запит. Якщо відповіді немає за наступні тридцять днів, просіть довідку про те, що частина не відповідає на запити. Зробіть копії усіх своїх наявних паперів, дайте довідку з військкомату про запити без відповідей та віднесіть все це до військової прокуратури у своєму місті чи обласному центрі. 
+                    </p>
+                       <h2 class="heading h2 margin_bottom10">КРОК 1:</h2>
+                        <img src="images/temp/skycity5.jpg" width="350" height="250" class="gray-frame padding-5 img-margin-right-w alignleft" alt="" />
+                    <p>
+                        Якщо ви були поранені або серйозно погіршився стан здоров'я, і ви проходили лікування у госпіталі та маєте висновок ВЛК, але не спрямовані на МСЕК. Тоді ви маєте право пройти МСЕК, поки проходите службу. Направлення на МСЕК дає військкомат або військова частина. 
+                    </p>
+                    <p>
+                        Якщо ви демобілізувалися – йдіть до своєї поліклініки. Там візьміть направлення на МСЕК та проходьте медкомісію. Медикосоціальна експертиза вас оглядає, у випадку, якщо все погано, вам дають групу інвалідності, якщо не дуже, встановлюють відсоток втрати працездатності. Рішення МСЕК ви маєте віднести до військкомату та написати заяву на ОГД (одноразову грошову допомогу)
+                    </p>
+                    <p>
+                        Якщо вам дали групу, йдете до райвиконкому, там вам повинні дати статус і посвідчення інваліда війни.
+                    </p>
+                        
+                    <p>
+                        Наступним кроком мусить бути оформлення пенсії у військкоматі. Для того, аби її оформити знадобиться грошовий атестат та довідка про додаткові нарахування. Їх можна отримати в обласному військкоматі. 
+                    </p>
+                       <h2 class="heading h2 margin_bottom10">КРОК 2:</h2>
+                        <img src="images/temp/skycity6.jpg" width="350" height="250" class="gray-frame padding-5 img-margin-right-w alignleft" alt="" />
+                    <p>
+                        Також для оформлення пенсії попрохають копію трудової книжки. Таким чином статус буде уже оформленим. 
+                    </p>
+                    <p>
+                        Наступне, що слід зробити - це піти в свою поліклініку до вашого сімейного лікаря. До нього ви також мусите принести копії всіх медичних документів із госпіталів і підклеїти їх до медичної карти. 
+                    </p>
+                    <p>
+                        "Прохайте поставити вас на облік як УБД або інваліда війни. Прохайте видати форму 070 це форма на путівки до санаторію. Можуть "поганяти" по лікарях і аналізах для цієї форми, а можуть і "не поганяти", - вказує у дописі Олександр Алієв.
+                    </p>
+                    <p>
+                        Наступне, що ви маєте зробити за словами військового - це попросити поставити вас у чергу на путівку до госпіталю інвалідів війни. Це такий стаціонар для ветеранів з повністю безкоштовним лікуванням. Є черга, госпіталізація за путівками. Але якщо вам погано, вас покладуть і без цієї путівки.
+                    </p>
+                    <p>
+                        Потім підіть в райвиконком за пільгами. Щоб не бігати "сто разів" візьміть з собою власника житла у якому живете, документи на житло, паспорти та свідоцтва про народження усіх прописаних, всі книжки про оплату комунальних рахунків. У віконцях ЖЕКу слід взяти довідку про склад сім’ї та зробиіть ксерокопії з неї. Далі запитайте де тут УПСЗН і де оформляються пільги.
+                    </p>
+                         <h2 class="heading h2 margin_bottom10">КРОК 3:</h2>
+                        <img src="images/temp/skycity7.jpg" width="350" height="250" class="gray-frame padding-5 img-margin-right-w alignleft" alt="" />
+                    <p>
+                        Потім подайте оригінали та копії паспорту, коду, посвідчення, довідку про склад сім'ї. Далі вам мають видати довідку, на яку кількість осіб поширюється пільга. Це дружина, діти, і батьки, якщо вони пенсіонери. Відразу робіть копії цієї довідки. Повертаєтеся до віконця ЖЕКу та даєте копії посвідчення, довідки, паспорта та ідентифікаційного коду.
+                    </p>
+                    <p>
+                        Наступне - ви маєте запитати, де знаходить кабінет з санаторно-курортного лікування для ветеранів. Саме у ньому вам і знадобиться форма 070. Вас поставлять у чергу на путівку до санаторію від держави на 24 дні, але можна потім зідзвонитися із санаторієм та попрохати поїхати з дружиною, але вже на 12 днів. 
+                    </p>
+                    <p>
+                        У цьому кабінеті не забудьте запитати, куди вам ще потрібно піти. Оскільки вас ще повинні завести до територіального центру соцпослуг та скласти соцпаспорт, у якому записують сімейний стан, житловий стан, що робити з роботою тощо.
+                    </p>
+                    <p>
+                        "Там приймають заяву на матеріальну допомогу від обласної ради. У Полтаві вона становила 25 тис. сім'ям загиблих, 15 тис. пораненим, 5 тис. тим, хто відслужив без поранень. Усі ці дії у нас в одній будівлі. Там же можна відвідати архітектурний відділ і написати заяву на ділянку землі (10 соток) для будівництва. Вам можуть говорити, що землі немає, але заяву пишіть, до неї додаються копії статусів, довідок, документів", - пише Олександ Алієв.
+                    </p>
+                          <h2 class="heading h2 margin_bottom10">КРОК 4:</h2>
+                        <img src="images/temp/skycity8.jpg" width="350" height="250" class="gray-frame padding-5 img-margin-right-w alignleft" alt="" />
+                    <p>
+                        Щодо міськради, то у кабінеті для звернень громадян, на ім'я мера міста пишіть заяву на отримання ділянки землі. Це звернення буде розіслане по райрадам міста і ті, своєю чергою, письмово повинні відповісти вам про стан справ. Так ви накриє відразу всі райони міста. Не бійтеся дублювати звернення. 
+                    </p>
+                    <p>
+                        При міськраді по наших місцевих рішеннях приймають ще заяви на матеріальну допомогу в розмірі 1 тис. Вона видається тим у кого вже є статус. Також там знаходиться Центр соціальних служб для сім'ї та молоді, вони теж вимагають форму 070 (копію) і оформлюють путівки до санаторію на 12 днів за місцевою програмою, теж заводять соцпаспорт і обіцяють "прийти в гості" та допомагати вирішувати наявні проблеми.
+                    </p>
+                    <p>
+                        "Із виданою довідкою на пільги, копіями та оригіналами паспорту, індентифікаційного коду, довідки, посвідчення та документами на житло ви йдете до «газу, світла, води». Там вам оформлюють нові книжечки на комуналку з зазначенням пільгових метрів, кубів і розповідають, що там скільки коштує. Пільга починає діяти з моменту її оформлення, а не з моменту отримання статусу і не з моменту видачі довідки", - зазначає військовий.
+                    </p>
+                         <h2 class="heading h2 margin_bottom10">КРОК 5:</h2>
+                        <img src="images/temp/skycity9.jpg" width="350" height="250" class="gray-frame padding-5 img-margin-right-w alignleft" alt="" />
+                    <p>
+                        Якщо у вас немає роботи, ви маєте піти до центру зайнятості та стати на облік. Там вам одразу мають оформити допомогу в розмірі 970 грн. та попросити принести документ про доходи з армії. Можна поросити, щоб вони самі зробили запит, тоді вам не прийдеться "бігати".
+                    </p>
+                    <p>
+                        Після цього вони мають перерахувати приблизно 1300 грн. Якщо у вас є вища освіта, можете прохати сертифікат на отримання другої вищої, понавчаєтеся рік безкоштовно, заочно. Якщо немає вищої освіти, але хочете її отримати, потрібно уточнювати про ЗНО.
+                    </p>
+                    <p>
+                        Якщо у вас є статус інваліда війни, можете поступити до будь-якого ВНЗ, на будь-яку спеціальність і принести документи до Фонду захисту інвалідів, він розгляне і прийме рішення про сплату до 100% плати за навчання.
+                    </p>
+                    <p>
+                        Так само, маючи статус "інвалід війни", в УПСЗН можна взяти документ для поліклініки на комісію для отримання автомобіля. У поліклініці вас мають направити на транспортний МСЕК і тоді вирішують, чи дійсно ви його по потребуєте. Якщо рішення позитивне, то ви можете отримати автівку. За отриманим документом ви можете пригнати собі авто з-за кордону без розмитнення або чекати отримання авто з ручним керуванням від держави.
+                    </p>
+                    <p>
+                        Щодо житла, то, перш за все, слід звернутися до Житлового відділу міської ради. Там вам мають дати список потрібних документів. Також потрібно в інвентар бюро взяти довідку (платно), що ви не маєте у власності житла або маєте.
+                    </p>
+                    <p>
+                        "Для того, щоб стати до черги на житло, в Полтаві застосовуються норми 6,5 метрів квадратних на людину. Якщо у вас прописані прямі родичі й на кожного припадає менше цієї квадратури, вас поставлять до черги на житло. Можу всіх деталей не знати, варто піти і про все дізнатися особисто. В інших областях норми можуть бути іншими", - зазначаєву своєму дописі Олександр Алієв.
+                    </p>
+                    <!--/text content-->
+                    <div class="clear20"></div>
+                      <div class="close"></div>
+                     <h1 class="heading h1 margin_bottom10">Центри допомоги учасникам АТО створені для допомоги демобілізованим учасникам АТО.</h1>                       
+                    
+                    <!--accordion-->
+                    <ul class="accordion-large">
+                    	<!--block-->
+                    	<li><a href="#" class="gray-only bold_only notextdecoration">Вінниця</a>
+                        	<div>
+                                <p>Вінницький ЦДУ АТО <br />
+                                   тел. (0432) 67-17-26
+                                </p>
+                            </div>
+                        </li>
+                    	<!--/block-->                        
+                        
+                    	<!--block-->                        
+                    	<li><a href="#" class="gray-only bold_only notextdecoration">Дніпропетровськ</a>
+                        	<div>
+                                <p>Дніпропетровський ЦДУ АТО 
+                                   тел. (056) 742 86 62, <br />
+                                   (068) 679 89 61, <br />
+                                   0 800 505 085
+                                </p>
+                            </div>
+                        </li>
+                    	<!--/block-->
+                        
+                        <!--block-->                        
+                    	<li><a href="#" class="gray-only bold_only notextdecoration">Волинський</a>
+                        	<div>
+	                            <p>Волинський ЦДУ АТО <br />
+                                   тел. +38 066 613 30 28
+                                </p>
+                            </div>
+                        </li>
+                    	<li><a href="#" class="gray-only bold_only notextdecoration">м. Краматорськ Донецької обл</a>
+                        	<div>
+                                <p>ЦДУ АТО у м. Краматорськ Донецької обл.<br /> 
+                                   тел. +38 066 809 98 48,<br />
+                                    +38 073 424 14 82 ,<br />
+                                    +38 096 119 65 66
+                                </p>
+                            </div>
+                        </li>
+                    	<!--/block-->
+
+                    	<!--block-->                                                
+                    	<li><a href="#" class="gray-only bold_only notextdecoration">Житомир</a>
+                        	<div>
+                                <p>
+                                Житомирський ЦДУ АТО<br /> 
+                                тел. (0412) 47-50-06,<br />
+                                (0412) 47-50-08
+                                </p>
+                            </div>
+                        </li>    
+                    	<!--/block-->  
+                        <!--block-->
+                    	<li><a href="#" class="gray-only bold_only notextdecoration">Закарпаття</a>
+                        	<div>
+                                <p>Закарпатський ЦДУ АТО<br />  
+                                   тел. (0312) 61-74-76,<br />  
+                                   (0312) 61-54-05
+                                </p>
+                            </div>
+                        </li>
+                    	<!--/block-->                        
+                        
+                    	<!--block-->                        
+                    	<li><a href="#" class="gray-only bold_only notextdecoration">Запоріжжя</a>
+                        	<div>
+                                <p>Запорізький ЦДУ АТО<br />  
+                                   тел. +38 (0612) 362525,<br />  
+                                   +380500700406
+                                </p>
+                            </div>
+                        </li>
+                    	<!--/block-->
+                        
+                        <!--block-->                        
+                    	<li><a href="#" class="gray-only bold_only notextdecoration">Івано-Франківськ</a>
+                        	<div>
+	                            <p>Ивано-Франківський ЦДУ АТО<br /> 
+                                  тел. +38 066 465 03 67,<br /> 
+                                  +38 068 453 88 28 ,<br /> 
+                                  +38 093 255 18 82,<br /> 
+                                  (0342) 55 22 99
+                                </p>
+                            </div>
+                        </li>
+                    	<li><a href="#" class="gray-only bold_only notextdecoration">Київ</a>
+                        	<div>
+                                <p>ЦДУ АТО в Київській обл.<br /> 
+                                    тел. 0 800 213 015 
+                                </p>
+                            </div>
+                        </li>
+                    	<!--/block-->
+
+                    	<!--block-->                                                
+                    	<li><a href="#" class="gray-only bold_only notextdecoration">Кіровоград</a>
+                        	<div>
+                                <p>
+                                Кіровоградський ЦДУ АТО <br />
+                                тел. +38 050 029 82 22,<br /> 
+                                +38 098 029 82 22
+                                </p>
+                            </div>
+                        </li>    
+                    	<!--/block--> 
+
+                        <!--block-->                                                
+                        <li><a href="#" class="gray-only bold_only notextdecoration"> м. Сіверодонецьк Луганської обл.</a>
+                            <div>
+                                <p>
+                                ЦДУ АТО у м. Сіверодонецьк Луганської обл.<br /> 
+                                тел. +38 097 070 52 25
+                                </p>
+                            </div>
+                        </li>    
+                        <!--/block--> 
+
+                        <!--block-->                                                
+                        <li><a href="#" class="gray-only bold_only notextdecoration">Львів</a>
+                            <div>
+                                <p>
+                                Львівський ЦДУ АТО<br /> 
+                                тел. +38 032 255 42 96
+                                </p>
+                            </div>
+                        </li>    
+                        <!--/block--> 
+
+                        <!--block-->                                                
+                        <li><a href="#" class="gray-only bold_only notextdecoration">Миколаїв</a>
+                            <div>
+                                <p>
+                                Миколаївський ЦДУ АТО<br /> 
+                                тел. (0512) 37 02 22,<br /> 
+                                + 093 355 44 08,<br /> 
+                                +38 097 618 96 16
+                                </p>
+                            </div>
+                        </li>    
+                        <!--/block--> 
+
+                        <!--block-->                                                
+                        <li><a href="#" class="gray-only bold_only notextdecoration">Одесса</a>
+                            <div>
+                                <p>
+                                Одеський ЦДУ АТО <br /> 
+                                тел. (0482) 39 00 04,<br />  
+                                (0482) 39 00 05
+                                </p>
+                            </div>
+                        </li>    
+                        <!--/block--> 
+
+                        <!--block-->                                                
+                        <li><a href="#" class="gray-only bold_only notextdecoration">Полтава</a>
+                            <div>
+                                <p>
+                                  Полтавський ЦДУ АТО <br />
+                                  тел. +38 066 992 14 74,<br /> 
+                                  +38 097 193 47 34
+                                </p>
+                            </div>
+                        </li>    
+                        <!--/block--> 
+                        <!--block-->                                                
+                        <li><a href="#" class="gray-only bold_only notextdecoration">Рівне</a>
+                            <div>
+                                <p>
+                                Рівненський ЦДУ АТО<br /> 
+                                тел. +38 050 663 60 90 ,<br />  
+                                +38 068 850 40 10
+                                </p>
+                            </div>
+                        </li>    
+                        <!--/block--> 
+                        <!--block-->                                                
+                        <li><a href="#" class="gray-only bold_only notextdecoration">Сумми</a>
+                            <div>
+                                <p>
+                                Сумський ЦДУ АТО<br /> 
+                                тел. +38 095 038 32 82,<br /> 
+                                +38 097 665 91 31,<br /> 
+                                +38 093 829 19 99
+                                </p>
+                            </div>
+                        </li>    
+                        <!--/block--> 
+                        <!--block-->                                                
+                        <li><a href="#" class="gray-only bold_only notextdecoration">Тернопіль</a>
+                            <div>
+                                <p>
+                                Тернопільський ЦДУ АТО<br /> 
+                                тел. +38 098 596 26 80,<br /> 
+                                +38 067 381 44 99,<br /> 
+                                +38 097 205 50 55
+                                </p>
+                            </div>
+                        </li>    
+                        <!--/block--> 
+                        <!--block-->                                                
+                        <li><a href="#" class="gray-only bold_only notextdecoration">Харків</a>
+                            <div>
+                                <p>
+                                Харківський ЦДУ АТО<br /> 
+                                тел. (57) 712 46 27
+                                </p>
+                            </div>
+                        </li>    
+                        <!--/block--> 
+                        <!--block-->                                                
+                        <li><a href="#" class="gray-only bold_only notextdecoration">Херсон</a>
+                            <div>
+                                <p>
+                                  Херсонський ЦДУ АТО<br />  
+                                  тел. (0552) 45-52-80
+                                </p>
+                            </div>
+                        </li>    
+                        <!--/block--> 
+                        <!--block-->                                                
+                        <li><a href="#" class="gray-only bold_only notextdecoration">Хмельницьк</a>
+                            <div>
+                                <p>
+                                Хмельницький ЦДУ АТО<br />  
+                                тел. (0382) 65-90-70,<br />  
+                                +38 067 380 50 65
+                                </p>
+                            </div>
+                        </li>    
+                        <!--/block--> 
+                        <!--block-->                                                
+                        <li><a href="#" class="gray-only bold_only notextdecoration">Черкаси</a>
+                            <div>
+                                <p>
+                                  Черкаський ЦДУ АТО<br />
+                                  тел. 0800 508 876
+                                </p>
+                            </div>
+                        </li>    
+                        <!--/block--> 
+                        <!--block-->                                                
+                        <li><a href="#" class="gray-only bold_only notextdecoration">Чернигів</a>
+                            <div>
+                                <p>
+                                  Чернигівський ЦДУ АТО<br /> 
+                                  тел. +38 093 343 23 32,<br /> 
+                                  +38 067 464 35 53,<br /> 
+                                  +38 050 493 43 53
+                                </p>
+                            </div>
+                        </li>    
+                        <!--/block--> 
+
+                        <!--block-->                                                
+                        <li><a href="#" class="gray-only bold_only notextdecoration">Чернівці</a>
+                            <div>
+                                <p>
+                                  Чернівецький ЦДУ АТО<br />  
+                                  тел. (0372)4-66-69
+                                </p>
+                            </div>
+                        </li>    
+                        <!--/block-->                                                                                                                                          
+                    </ul>                    
+                    <!--accordion-->
+                </div>
+              </div>
+                
+              <!--/page content goes here-->                
+                
+            </div>
+            <!-- /content container-->
+
+	        <div class="clear40"></div>
+	
+        </div>
+        <!--/page content wrapper-->
+        
+        <!--footer-->
+        <div id="footer_container">
+            <div id="footer" class="center-clear">
+                <ul>
+                    <li><a href="index.html" class="active">Головна</a></li>
+                    <li><a href="maps.html">Карта</a></li>
+                    <li><a href="#">Пільги</a></li>
+                    <li><a href="#">Освіта</a></li>
+                    <li><a href="#">Лікування</a></li>
+                    <li><a href="contact.html">Контакти</a></li>
+                    <li><a href="comens.html">Kоментарі</a></li>
+                </ul>
+                 <div>Інформаційний сайт - Твої права.Життя після АТО.</div>
+            </div>
+        </div>
+        <!-- /footer-->
+    
+    <!--/body wrapper-->    
+</body>
+<!-- /body -->
+
+</html>

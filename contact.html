@@ -1,0 +1,372 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Контакти</title>
+<link href='http://fonts.googleapis.com/css?family=Terminal+Dosis:400,700,800,600,500,300,200' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<link rel="stylesheet" type="text/css" href="css/default.css"/>
+<link rel="shortcut icon" href="icon.ico" type="image/i-icon" />
+
+<!--jquery library-->
+<script type="text/javascript" src="scripts/jquery-1.7.1.min.js"></script>
+<!--/jquery library-->
+
+<!--jquery easing-->
+<script type="text/javascript" src="scripts/jquery.easing.1.3.js"></script>
+<!--/jquery easing-->
+
+<!--nivo slider plugin for jquery-->
+<script type="text/javascript" src="scripts/nivo-slider/jquery.nivo.slider.js"></script>
+<link rel="stylesheet" type="text/css" href="scripts/nivo-slider/nivo-slider.css"/>
+<!--/ nivo slider plugin for jquery-->
+
+<!--superfish dropdown-->
+<link rel="stylesheet" type="text/css" href="scripts/superfish/css/superfish.css"/>
+<script type="text/javascript" src="scripts/superfish/js/superfish.js"></script>
+<script type="text/javascript" src="scripts/superfish/js/hoverIntent.js"></script>
+<script type="text/javascript" src="scripts/superfish/js/jquery.bgiframe.min.js"></script>
+<script type="text/javascript" src="scripts/superfish/js/supersubs.js"></script>
+<!--/superfish dropdown-->
+
+<!--auto complete-->
+<script type='text/javascript' src='scripts/autocomplete/jquery.autocomplete.min.js'></script>
+<link rel="stylesheet" type="text/css" href="scripts/autocomplete/jquery.autocomplete.css" />
+<!--/auto complete-->
+
+<!--misc. scripts-->
+<script type="text/javascript" src="scripts/scripts.js"></script>
+<!--/misc. scripts-->
+
+<!--form validation & submit-->
+<link rel="stylesheet" href="scripts/form-validation/validationEngine.jquery.css" type="text/css"/>
+<script src="scripts/form-validation/languages/jquery.validationEngine-en.js" type="text/javascript" charset="utf-8"></script>
+<script src="scripts/form-validation/jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function(){
+		// binds form submission and fields to the validation engine
+		var frm = $("#contact_form");
+		var msgdiv = $("#message_box_place_holder");
+		frm.validationEngine({promptPosition:'topRight'});
+		
+		$("#btnReset").click(function(){
+			frm[0].reset();
+			return false;
+		});
+		
+		$("#btnSubmit").click(function(){
+			$(".message-box").remove();
+			
+			if(frm.validationEngine('validate')){
+				$(this).fadeOut('fast');
+				$.ajax({
+					type: 'POST',
+					url: 'xml/contact.php',
+					data: frm.serialize(),
+					success: function(result) {
+						if(result=="1")
+						{
+							inlineMsgBox(msgdiv,'information','Thank you. We have received your mail.',617);
+							frm[0].reset();
+						}else{					
+							inlineMsgBox(msgdiv,'error','Error : ' + result,617);
+						}
+						$("#btnSubmit").fadeIn('fast');
+					}
+				});
+			}
+			
+			return false;
+		});
+	});
+</script>			
+<!--/form validation & submit-->
+
+</head>
+
+<!--body-->
+<body>
+	<!--sliding login panel-->
+	<div id="login_panel">
+        <div id="content">
+            <div>
+                <div class="column column1">
+                    <!--help text, maybe-->
+                    <h3>Інформаційний сайт для учасників бойових дій:</h3>
+                    <p>
+                      Сайт призначений для надання інформаційної підтримки учасникам бойових дій АТО. Містить базу інформації про реабілітацію, освіту та пільги.
+                    </p>
+                    <p>
+                        Для того, щоб залишати свої коментарі та пропозиції на сайті необхідно пройти реєстрацію.  
+                    </p>                    
+                    <p>
+                        <a href="#" class="orange-only notextdecoration">Ще не зареєстровані ? Зареєструватись ?</a>
+                    </p>
+                
+                </div>
+                                
+                <div class="column column2">
+                    <!--user signin-->
+                    <h3>Вхід на сайт:</h3>
+                    <form name="contact_form" id="contact_form" class="generic-form alignleft_block" action="contact.html">
+                        <p>
+                            <input type="text" name="txt_name" id="txt_name" class="validate[required] medium-login user margin-right-10" />
+                            <input type="text" name="txt_email" id="txt_email" class="validate[required] medium-login password" />
+                        </p>
+                        <div class="clear10"></div>                                                
+                        <p>
+                            <input type="checkbox" id="chk_rememberme" name="chk_rememberme" /><label for="chk_rememberme">Запам'ятати мене</label>
+                            &nbsp;/&nbsp;
+                            <a href="#" class="orange-only notextdecoration">Нагадати пароль?</a>
+                        </p>                     
+                           
+                        <div class="clear"></div>
+                        
+                        <a href="#" class="button alignleft_block bold_only notextdecoration" id="btnLoginNow"><span>Увійти</span></a>
+
+                    </form>
+                    <!--/user login-->
+                </div>
+            </div>
+        </div>
+        <div id="signin_register">
+            <ul>
+                <li>Вітаємо на сайті!</li>
+                <li><a href="#">&nbsp;</a></li>
+            </ul>
+        </div>
+    </div>    
+    <!--/sliding login panel-->
+
+	<!--top anchor-->
+    <a name="top"></a>
+    
+    <!--body wrapper-->
+   <div id="body-wrapper">
+        
+        <!--header container-->
+        <div id="header-contanier">    
+        
+            <!--header wrapper-->
+            <div id="header" class="center-clear">   
+                
+                <!--banner 468x60-->
+                    <img class="banner" src="images/temp/47776.jpg" width="970" height="250" alt="banner" />
+                <!-- /banner 468x60-->                
+                                       
+                <!--header place holder-->
+                <div class="header-place-holder"></div>
+                
+                <!--social tabs-->
+                <ul id="social_tabs">
+                    <li><a href="https://twitter.com/vsedopomogaATO" target="_blank"><img src="images/social_icons/t.png" width="30" height="27" alt="" /></a></li>
+                    <li><a href="https://www.facebook.com/vsedopomogaATO" target="_blank"><img src="images/social_icons/f.png" width="30" height="27" alt="" /></a></li>
+                    <li><a href="http://vk.com/vsedopomogaato" target="_blank"><img src="images/social_icons/v.png" width="30" height="27" alt="" /></a></li>
+                </ul>
+                <!-- /social tabs-->
+                
+                <!--menu-->
+                <ul id="top_menu" class="sf-menu">
+                    <li><a href="index.html">Головна</a><span>Початок сайту</span></li>
+                    <li><a href="#.html">Карта</a><span>З чого потрібно почати</span>
+                        <!--first level dropdown menu-->
+                        <ul>
+                            <li><a href="maps.html">Документи</a></li>
+                            <li><a href="social_sl.html">Соціальні служби</a></li>
+                            <li><a href="famile.html">Діти сім'я</a></li>                                                         
+                        </ul>
+                        <!--/first level dropdown menu-->                        
+                    </li>
+                    <li><a href="#">Пільги</a><span>Необхідні данні</span>
+                        <!--first level dropdown menu-->
+                        <ul>
+                             <li><a href="#">Земельне законодавство</a></li>
+                             <li><a href="#">Отримання статусу</a>
+                                <!--second level dropdown menu-->
+                                <ul>
+                                    <li><a href="#">Демобілізований</a></li>            
+                                    <li><a href="#">Сім'я загиблого</a></li>
+                                </ul>
+                                 <!--/second level dropdown menu-->
+                             </li>
+                             <li><a href="#">Отримання житла</a></li>
+                             <li><a href="#">Податкове законодавство</a></li>
+                             <li><a href="#">Отримання кредитів</a></li>
+                             <li><a href="#">Виплати</a></li>                                 
+                             <li><a href="#">Юридична допомога</a></li>
+                             <li><a href="#">Волонтерські організації<br>(контакти)</a></li>
+                        </ul>
+                        <!--/first level dropdown menu-->                        
+                    </li>
+                    <li><a href="#">Освіта</a><span>Що потрібно знати</span>
+                        <!--first level dropdown menu-->
+                        <ul>
+                            <li><a href="#">Закон про освіту</a></li>                        
+                     <li><a href="institut.html">Вищі навчальні заклади</a></li>
+                        </ul>
+                        <!--/first level dropdown menu-->                        
+                    </li>
+                    <li><a href="#">Лікування</a><span>Відпочинок</span>
+                        <!--first level dropdown menu-->
+                        <ul>
+                            <li><a href="#">Закон про лікування</a></li>
+                            <li><a href="#">Психологічна реабілітація</a></li>
+                            <li><a href="#">Санаторне лікування</a></li>
+                        </ul>
+                        <!--/first level dropdown menu-->                        
+                    </li>                                                                
+                    <li><a href="contact.html">Контакти</a><span>Необхідні контакти</span></li> 
+
+                    <li><a href="comens.html">Kоментарі</a><span>Ваші конентарі</span></li>         
+                </ul>
+                <!-- /menu-->
+                
+                <!--search box-->
+                <div id="search_box">
+                    <form method="post" name="form_search" id="form_search" class="form_search" action="all_elements.html">
+                        <input type="text" name="txt_search" id="txt_search" class="txt_search" value="пошук..." />
+                        <input type="submit" name="btn_search" id="btn_search" class="btn_search" value="" />
+                    </form>
+                </div>
+                <!-- /search box-->
+                
+            </div>
+            
+        </div>
+                <!-- /header wrapper-->
+                
+            </div>
+            <!-- /header container-->
+
+	        <div class="clear40"></div>
+                       
+            <!--bread crumb-->
+            <div class="center-clear">
+                <div id="breadcrumb" class="page-columns-head-style gray-frame">
+                    <ul>
+                        <li><a href="index.html">Головна</a></li>
+                        <li><a href="contact.html" class="active">Контакти</a></li> 
+                    </ul>
+                </div>
+			</div>                
+            <!--/bread crumb-->
+            
+        <!-- </div> -->
+        <!--/page header wrapper-->
+        
+        
+        <!--page content wrapper-->
+        <div id="page-content-wrapper">        
+        
+            <!--content container-->
+            <div class="center-clear page-content-wrapper">
+                
+                <div class="page-content gray-frame alignleft_block full-content-width">
+                    <!--inner title-->
+                    <h1 class="heading h1" style="text-align: center;">Центри допомоги учасникам АТО створені для допомоги демобілізованим учасникам АТО.
+                    </h1>
+                      <p class="bold_only" style="text-align: justify;">Робота Центрів пов'язана з юридичними питаннями, медичною допомогою, соціальною адаптацією, роботою з волонтерськими спілками та організаціями, що діють на території України, а також взаємодія з Центрами інших областей. 
+                      Чітка координація між обласними Центрами та Центром у Києві дає змогу збільшити можливості допомоги для ветеранів АТО та їхніх родин. <br />
+                      Запрошуємо усіх демобілізованих бійців звертатися за допомогою у наші Центри за телефонами:</p>
+                    <!--/inner title-->
+                    
+					<div class="clear"></div>
+                    
+                    <!--right block-->
+                    <div class="alignleft_block">
+                    <div class="clear10"></div>
+                    <div class="hr-two"></div>
+                    	
+                        <!--google maps-->
+                        <p class="bold_only">Карта</p>
+                        <div id="map" style="width: 950px; height: 700px; border: 5px solid silver;"></div>
+                    <script type="text/javascript">
+                        var locations = [
+                            ['Вінницький ЦДУ АТО<br />тел. (0432) 67-17-26', 49.224772722794825, 28.5205078125, 4],
+                            ['Волинський ЦДУ АТО<br />тел. +38 066 613 30 28', 50.75035931136963, 25.345458984375, 5],
+                            ['ЦДУ АТО у м. Краматорськ<br />Донецької обл.тел.<br />+38 066 809 98 48,<br />+38 073 424 14 82 ,<br />+38 096 119 65 66', 48.712712581452394, 37.562255859375, 3],
+                            ['Житомирський ЦДУ АТО<br />тел. (0412) 47-50-06,<br />(0412) 47-50-08', 50.2612538275847, 28.65234375, 2],
+                            ['Ивано-Франківський ЦДУ АТО<br />тел. +38 066 465 03 67,<br />+38 068 453 88 28,<br />+38 093 255 18 82,<br />(0342) 55 22 99', 48.922499263758255, 24.752197265625, 1],
+                            ["Запорізький ЦДУ АТО<br />тел. +38 (0612) 362525,<br />+380500700406", 47.85003078545827, 35.145263671875, 6],
+                            ['Закарпатський ЦДУ АТО<br />тел. (0312) 61-74-76,<br />(0312) 61-54-05', 48.58932584966972, 22.30224609375, 7],
+                            ['ЦДУ АТО в Київській обл.<br />тел. 0 800 213 015', 50.45750402042058, 30.531005859375, 8],
+                            ['Дніпропетровський ЦДУ АТО<br />тел. (056) 742 86 62,<br />(068) 679 89 61,<br />0 800 505 085', 48.45835188280866, 35.079345703125, 9],
+                            ['Кіровоградський ЦДУ АТО<br />тел. +38 050 029 82 22,<br />+38 098 029 82 22', 48.48748647988415, 32.288818359375, 10],
+                            ['ЦДУ АТО у м. Сіверодонецьк Луганської обл<br />тел. +38 097 070 52 25', 48.93693495409401, 38.485107421875, 11],
+                            ['Львівський ЦДУ АТО<br />тел. +38 032 255 42 96', 49.83089628828897, 24.01611328125, 12],
+                            ['Миколаївський ЦДУ АТО<br />тел. (0512) 37 02 22,<br />+ 093 355 44 08,<br />+38 097 618 96 16',  46.99524110694597, 32.01416015625, 13],
+                            ['Одеський ЦДУ АТО<br />тел. (0482) 39 00 04,<br />(0482) 39 00 05', 46.40756396630067, 30.76171875, 14],
+                            ['Полтавський ЦДУ АТО<br />тел. +38 066 992 14 74,<br />+38 097 193 47 34', 49.5822260446217, 34.56298828125, 15],
+                            ['Рівненський ЦДУ АТO<br />тел. +38 050 663 60 90 ,<br />+38 068 850 40 10', 50.65294336725709, 26.25732421875, 16],
+                            ['Сумський ЦДУ АТО<br />тел. +38 095 038 32 82,<br />+38 097 665 91 31,<br />+38 093 829 19 99', 50.88917404890332, 34.8046875, 17],
+                            ['Тернопільський ЦДУ АТО<br />тел. +38 098 596 26 80,<br />+38 067 381 44 99,<br />+38 097 205 50 55', 49.54659778073743, 25.59814453125, 18],
+                            ['Харківський ЦДУ АТО<br />тел. (57) 712 46 27', 49.97948776108649, 36.23291015625, 19],
+                            ['Херсонський ЦДУ АТО<br />тел. (0552) 45-52-80', 46.64189395892875, 32.618408203125, 20],
+                            ['Хмельницький ЦДУ АТО<br />тел. (0382) 65-90-70,<br />+38 067 380 50 65', 49.43241258024849, 27.00439453125, 21],
+                            ['Черкаський ЦДУ АТO<br />тел. 0800 508 876',  49.42526716083715, 32.047119140625, 22],
+                            ['Чернигівський ЦДУ АТО<br />тел. +38 093 343 23 32,<br />+38 067 464 35 53,<br />+38 050 493 43 53', 51.481382896100975, 31.26708984375, 23],
+                            ['Чернівецький ЦДУ АТО<br />тел. (0372)4-66-69', 48.268569112964336, 25.927734375, 24]
+                          ];
+                        var map = new google.maps.Map(document.getElementById('map'), {
+                            zoom: 6,
+                            center: new google.maps.LatLng(50.45, 30.53),
+                            mapTypeId: google.maps.MapTypeId.ROADMAP
+                          });
+                        var infowindow = new google.maps.InfoWindow();
+                        var marker, i;
+                          for (i = 0; i < locations.length; i++) {  
+                          marker = new google.maps.Marker({
+                              position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                              map: map
+                          });
+                        google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                        return function() {
+                          infowindow.setContent(locations[i][0]);
+                          infowindow.open(map, marker);
+                        }
+                      })(marker, i));
+                    }
+                </script>
+                        <!--/google maps-->
+                    
+                    	<div class="clear10"></div>
+                    	<div class="hr-two"></div>
+                        <div id="message_box_place_holder"></div>
+                    </div>
+                    
+		            <div class="clear20"></div>                    
+                </div>
+                <!--/right block-->
+                
+            </div>
+            <!-- /content container-->
+    	
+            <div class="clear40"></div>
+
+        </div>
+        <!--/page content wrapper-->
+
+        <!--footer-->
+       <div id="footer_container">
+            <div id="footer" class="center-clear">
+                <ul>
+                    <li><a href="index.html" class="active">Головна</a></li>
+                    <li><a href="maps.html">Карта</a></li>
+                    <li><a href="#">Пільги</a></li>
+                    <li><a href="#">Освіта</a></li>
+                    <li><a href="#">Лікування</a></li>
+                    <li><a href="contact.html">Контакти</a></li>
+                    <li><a href="comens.html">Kоментарі</a></li>
+                </ul>
+                <div>Інформаційний сайт - Твої права.Життя після АТО.
+                </div>
+            </div>
+        </div>
+        <!-- /footer-->
+    <!--/body wrapper-->    
+</body>
+<!-- /body -->
+
+</html>

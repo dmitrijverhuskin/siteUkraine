@@ -1,0 +1,704 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Діти сім'я</title>
+<link href='http://fonts.googleapis.com/css?family=Terminal+Dosis:400,700,800,600,500,300,200' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<link rel="stylesheet" type="text/css" href="css/default.css"/>
+<link rel="shortcut icon" href="icon.ico" type="image/i-icon" />
+
+<!--jquery library-->
+<script type="text/javascript" src="scripts/jquery-1.7.1.min.js"></script>
+<!--/jquery library-->
+
+<!--jquery easing-->
+<script type="text/javascript" src="scripts/jquery.easing.1.3.js"></script>
+<!--/jquery easing-->
+
+<!--nivo slider plugin for jquery-->
+<script type="text/javascript" src="scripts/nivo-slider/jquery.nivo.slider.js"></script>
+<link rel="stylesheet" type="text/css" href="scripts/nivo-slider/nivo-slider.css"/>
+<!--/nivo slider plugin for jquery-->
+
+<!--superfish dropdown-->
+<link rel="stylesheet" type="text/css" href="scripts/superfish/css/superfish.css"/>
+<script type="text/javascript" src="scripts/superfish/js/superfish.js"></script>
+<script type="text/javascript" src="scripts/superfish/js/hoverIntent.js"></script>
+<script type="text/javascript" src="scripts/superfish/js/jquery.bgiframe.min.js"></script>
+<script type="text/javascript" src="scripts/superfish/js/supersubs.js"></script>
+<!--/superfish dropdown-->
+
+<!--auto complete-->
+<script type='text/javascript' src='scripts/autocomplete/jquery.autocomplete.min.js'></script>
+<link rel="stylesheet" type="text/css" href="scripts/autocomplete/jquery.autocomplete.css" />
+<!--/auto complete-->
+
+<!--misc. scripts-->
+<script type="text/javascript" src="scripts/scripts.js"></script>
+<script type="text/javascript" src="scripts/jquery-backgroundpos/jquery.backgroundpos.pack.js"></script>
+<!--/misc. scripts-->
+
+<!-- vvvvv -->
+  <script type="text/javascript"> 
+    document.ondragstart = noselect; // запрет на перетаскивание
+    document.onselectstart = noselect; // запрет на выделение элементов страницы 
+    document.oncontextmenu = noselect; // запрет на выведение контекстного меню 
+    function noselect() {return false;} 
+</script>
+<!-- vvvvv -->
+</head>
+
+<!--body-->
+<body  onmousedown="return false;" onclick="return true;">
+	<!--sliding login panel-->
+	<div id="login_panel">
+        <div id="content">
+            <div>
+                <div class="column column1">
+                    <!--help text, maybe-->
+                    <h3>Інформаційний сайт для учасників бойових дій:</h3>
+                    <p>
+                      Сайт призначений для надання інформаційної підтримки учасникам бойових дій АТО. Містить базу інформації про реабілітацію, освіту та пільги.
+                    </p>
+                    <p>
+                        Для того, щоб залишати свої коментарі та пропозиції на сайті необхідно пройти реєстрацію.  
+                    </p>                    
+                    <p>
+                        <a href="#" class="orange-only notextdecoration">Ще не зареєстровані ? Зареєструватись ?</a>
+                    </p>
+                
+                </div>
+                                
+                <div class="column column2">
+                    <!--user signin-->
+                    <h3>Вхід на сайт:</h3>
+                    <form name="contact_form" id="contact_form" class="generic-form alignleft_block" action="contact.html">
+                        <p>
+                            <input type="text" name="txt_name" id="txt_name" class="validate[required] medium-login user margin-right-10" />
+                            <input type="text" name="txt_email" id="txt_email" class="validate[required] medium-login password" />
+                        </p>
+                        <div class="clear10"></div>                                                
+                        <p>
+                            <input type="checkbox" id="chk_rememberme" name="chk_rememberme" /><label for="chk_rememberme">Запам'ятати мене</label>
+                            &nbsp;/&nbsp;
+                            <a href="#" class="orange-only notextdecoration">Нагадати пароль?</a>
+                        </p>                     
+                           
+                        <div class="clear"></div>
+                        
+                        <a href="#" class="button alignleft_block bold_only notextdecoration" id="btnLoginNow"><span>Увійти</span></a>
+
+                    </form>
+                    <!--/user login-->
+                </div>
+            </div>
+        </div>
+        <div id="signin_register">
+            <ul>
+                <li>Вітаємо на сайті!</li>
+                <li><a href="#">&nbsp;</a></li>
+            </ul>
+        </div>
+    </div>    
+    <!--/sliding login panel-->
+
+    <!--body wrapper-->
+    <div id="body-wrapper">
+    
+    	<div id="page-header-wrapper">
+    
+            <!--header container-->
+            <div id="header-contanier">
+            
+                <!--header wrapper-->
+                <div id="header" class="center-clear">
+                    
+                    <img class="banner" src="images/temp/47776.jpg" width="970" height="250" alt="banner" />
+                                
+                    <!--header place holder-->
+                    <div class="header-place-holder"></div>
+                    
+                    <!--social tabs-->
+                   <ul id="social_tabs">
+                    <li><a href="https://twitter.com/vsedopomogaATO" target="_blank"><img src="images/social_icons/t.png" width="30" height="27" alt="" /></a></li>
+                    <li><a href="https://www.facebook.com/vsedopomogaATO" target="_blank"><img src="images/social_icons/f.png" width="30" height="27" alt="" /></a></li>
+                    <!-- <li><a href="#"><img src="images/social_icons/o.png" width="30" height="27" alt="" /></a></li> -->
+                    <!-- <li><a href="#"><img src="images/social_icons/s.png" width="30" height="27" alt="" /></a></li> -->
+                    <li><a href="http://vk.com/vsedopomogaato" target="_blank"><img src="images/social_icons/v.png" width="30" height="27" alt="" /></a></li>
+                   </ul>
+                    <!-- /social tabs-->
+
+                    <!--menu-->
+                    <ul id="top_menu" class="sf-menu">
+                    <li><a href="index.html">Головна</a><span>Початок сайту</span></li>
+                    <li><a href="#.html">Карта</a><span>З чого потрібно почати</span>
+                        <!--first level dropdown menu-->
+                        <ul>
+                            <li><a href="maps.html">Документи</a></li>
+                            <li><a href="social_sl.html">Соціальні служби</a></li>
+                            <li><a href="famile.html">Діти сім'я</a></li>                                                         
+                        </ul>
+                        <!--/first level dropdown menu-->                        
+                    </li>
+                    <li><a href="#">Пільги</a><span>Необхідні данні</span>
+                        <!--first level dropdown menu-->
+                        <ul>
+                             <li><a href="#">Земельне законодавство</a></li>
+                             <li><a href="#">Отримання статусу</a>
+                                <!--second level dropdown menu-->
+                                <ul>
+                                    <li><a href="#">Демобілізований</a></li>            
+                                    <li><a href="#">Сім'я загиблого</a></li>
+                                </ul>
+                                 <!--/second level dropdown menu-->
+                             </li>
+                             <li><a href="#">Отримання житла</a></li>
+                             <li><a href="#">Податкове законодавство</a></li>
+                             <li><a href="#">Отримання кредитів</a></li>
+                             <li><a href="#">Виплати</a></li>                                 
+                             <li><a href="#">Юридична допомога</a></li>
+                             <li><a href="#">Волонтерські організації<br>(контакти)</a></li>                       
+                        </ul>
+                        <!--/first level dropdown menu-->                        
+                    </li>
+                    <li><a href="#">Освіта</a><span>Що потрібно знати</span>
+                        <!--first level dropdown menu-->
+                        <ul>
+                            <li><a href="#">Закон про освіту</a></li>                        
+                            <li><a href="institut.html">Вищі навчальні заклади</a></li>
+                        </ul>
+                        <!--/first level dropdown menu-->                        
+                    </li>
+                    <li><a href="#">Лікування</a><span>Відпочинок</span>
+                        <!--first level dropdown menu-->
+                        <ul>
+                            <li><a href="#">Закон про лікування</a></li>
+                            <li><a href="#">Психологічна реабілітація</a></li>
+                            <li><a href="#">Санаторне лікування</a></li>
+                        </ul>
+                        <!--/first level dropdown menu-->                        
+                    </li>                                                                
+                    <li><a href="contact.html">Контакти</a><span>Необхідні контакти</span></li> 
+
+                    <li><a href="comens.html">Kоментарі</a><span>Ваші конентарі</span></li>          
+                </ul>
+                    <!-- /menu-->
+                    
+                    <!--search box-->
+                    <div id="search_box">
+                        <form method="post" name="form_search" id="form_search" class="form_search" action="all_elements.html">
+                            <input type="text" name="txt_search" id="txt_search" class="txt_search" value="Пошук..." />
+                            <input type="submit" name="btn_search" id="btn_search" class="btn_search" value="" />
+                        </form>
+                    </div>
+                    <!-- /search box-->
+                    
+                </div>
+                <!-- /header wrapper-->
+                
+            </div>
+            <!-- /header container-->
+
+	        <div class="clear40"></div>
+                        
+            <!--side bar title and bread crumb-->
+            <div class="center-clear">
+                <div class="page-columns-head-style gray-frame page-column1 margin-right-10">
+                	<h1 class="heading h1">Додаткові матеріали:</h1>
+                </div>
+                
+                <div id="breadcrumb" class="page-columns-head-style gray-frame page-column2">
+                    <ul>
+                        <li><a href="index.html">Головна</a></li>
+                        <li><a href="maps.html">Карта</a></li>                    
+                        <li><a href="famile.html" class="active">Діти сім'я</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--/side bar title and bread crumb-->
+            
+        </div>
+        <!--/page header wrapper-->
+        
+        
+        <!--page content wrapper-->
+        <div id="page-content-wrapper">        
+        
+            <!--content container-->
+          <div class="center-clear page-content-wrapper">
+                
+                <!--side bar-->
+                <div class="side_bar gray-frame page-column1 margin-right-8">
+                	<!--navigation-->
+                    <ul class="accordion page-list-menu">
+                        <li class="active"><a href="http://zakon5.rada.gov.ua/laws/show/1080-19" target="_blank
+                         ">Пенсійне забезпечення резервістів</a></li>
+                        <li><a href="http://ckp.in.ua/news/8468" target="_blank">7 податкових пільг для учасників АТО</a></li>
+                        <li><a href="http://taxlink.ua/ua/news/pilgi-uchasnikam-ato-shhodo-splati-podatkiv-ta-zboriv.htm" target="_blank">Пільги учасникам АТО щодо сплати податків</a></li>
+                        <li><a href="https://medium.com/@GeneralStaffUA/%D0%B2%D1%96%D0%B9%D1%81%D1%8C%D0%BA%D0%BE%D0%B2%D0%B0-%D1%81%D0%BB%D1%83%D0%B6%D0%B1%D0%B0-%D0%B7%D0%B0-%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%B0%D0%BA%D1%82%D0%BE%D0%BC-%D1%83-%D0%B7%D0%B1%D1%80%D0%BE%D0%B9%D0%BD%D0%B8%D1%85-%D1%81%D0%B8%D0%BB%D0%B0%D1%85-%D1%83%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B8-bbfe46406c87#.218cfs48r" target="_blank">Військова служба за контрактом у ЗСУ</a></li>
+                        <li><a href="http://npu.in.ua/ua/atoua/825-perelik-notariusiv-ukrajini-yaki-na-dobrovilnikh-zasadakh-zdijsnyuyut-bezkoshtovne-notarialne-zasvidchennya-stanom-na-15-01-2015#.Vu-PCndRGSo" target="_blank">Перелік нотаріусів які допомагають воїнам АТО</a></li>
+                        <li><a href="http://zakon4.rada.gov.ua/laws/show/1071-96-%D0%BF" target="_blank">Порядок отримання лікарських препаратів</a></li>
+                        <li><a href="https://www.facebook.com/vsedopomogaATO/posts/1156076824437284:0" target="_blank">ОБЕРЕЖНО!! Єдиний реєстр учасників АТО.</a></li>  
+                        <li><a href="https://www.facebook.com/vsedopomogaATO/posts/1155098974535069:0" target="_blank">Оскарження незаконних дій керівництва</a></li>
+                         <li><a href="http://legal100.org.ua/?page_id=1332" target="_blank">Пам'ятка військовослужбовцю</a></li>
+                         <li><a href="http://espu.org.ua/" target="_blank">Єдиний союз патріотів України</a></li>
+                         <li><a href="http://legalaid.gov.ua/ua/" target="_blank">Правова допомога</a></li>
+                         <li><a href="http://ato.vobu.com.ua/page2.ukr.html" target="_blank">Учасники АТО: статус пільги</a></li>
+                        <li><a href="http://life-after-ato.com.ua/2016/05/21/%D1%80%D0%BE%D0%B7%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%BD%D0%BE-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82-%D0%BA%D0%BE%D0%BD%D1%86%D0%B5%D0%BF%D1%86%D1%96%D1%97-%D1%80%D0%B5%D1%84%D0%BE%D1%80%D0%BC%D1%83/#more-6378" target="_blank">Життя після Ато (інформаційний сайт)</a></li>
+                        <li><a href="http://goo.gl/yAAE7R" target="_blank">Кабінет Міністрів України на житло військовим</a></li>
+                        <li><a href="http://www.softline.kiev.ua/news/769-softlajn-it-gotova-brat-na-rabotu-uchastnikov-ato.html" target="_blank">SOFTLINE IT РАБОТА УЧАСТНИКАМ АТО</a></li>
+                    </ul>
+                    
+                    <!--title-->
+                  	<h1 class="heading-with-left-margin h1">Ми їх пам'ятаємо</h1>
+					<!--/title-->   
+					
+                    <!--boxes-->
+                    <div class="alignleft_block">
+
+                      	<div class="box-125 alignleft_block first">
+                            <img src="images/temp/themeforest.jpg" width="123" height="160" alt="" />
+                        </div>
+                        
+                        <div class="box-125 alignleft_block">
+                            <img src="images/temp/codecanyon.jpg" width="123" height="160" alt="" />
+                        </div>
+    
+                        <div class="clear"></div>
+                        <div class="clear"></div>
+    
+                      	<div class="box-125 alignleft_block first no-bottom-margin">
+                            <img src="images/temp/activeden.jpg" width="123" height="160" alt="" />	
+                        </div>
+                      	
+                        <div class="box-125 alignleft_block no-bottom-margin">
+                            <img src="images/temp/tutorials.jpg" width="123" height="160" alt="" />	
+                        </div>
+
+
+                        <div class="clear"></div>
+                        <div class="clear20"></div>
+    
+                        <div class="box-125 alignleft_block first no-bottom-margin">
+                            <img src="images/temp/activeden1.jpg" width="123" height="160" alt="" /> 
+                        </div>
+                        
+                        <div class="box-125 alignleft_block no-bottom-margin">
+                            <img src="images/temp/tutorials1.jpg" width="123" height="160" alt="" /> 
+                        </div>
+					</div>
+                    <div class="clear20"></div>
+                    <div class="clear20"></div>
+					
+                    <div class="splitter-h alignleft_block"></div>
+
+                    <!--work with us-->
+                    <a href="#" class="alignleft_block">
+                    	<img class="img_zoom" src="images/temp/workwithus.jpg" width="288" height="150" alt=""/>
+                    </a>
+                    <a href="#" class="alignleft_block">
+                        <img class="img_zoom" src="images/temp/workwithus1.jpg" width="288" height="150" alt=""/>
+                    </a>
+                    <!--/work with us-->
+                    <div class="clear20"></div>
+                    
+           	  	</div>
+                <!--/side bar-->
+                
+                <!--page content goes here-->
+            	<div class="page-content gray-frame">
+                    <h1 class="heading h1 margin_bottom10">Які пільги мають члени сімей учасників бойових дій?</h1>
+                    
+                    <!--text content-->
+                    
+                    <p>
+                    Перш за все вкажемо: п. 1 ч. 1 <a href="http://www.vobu.com.ua/ukr/legislations/view/846#st10" target="_blank">ст. 10 Закону про ветеранів війни </a> поширює чинність цього нормативного акта (а отже – і передбачені ним пільги) на сім'ї учасників бойових дій, зазначених у ст. 6 цього Закону, які загинули (пропали безвісти) або померли внаслідок поранення, контузії чи каліцтва, одержаних під час захисту Батьківщини або виконання інших обов'язків військової служби (службових обов'язків), а також внаслідок захворювання, пов'язаного з перебуванням на фронті або одержаного в період проходження військової служби.</p>
+                        
+                    <p><img src="images/temp/skycity10.jpg" width="350" height="350" class="gray-frame padding-5 img-margin-right-w alignleft" alt="" />
+                       До членів сімей загиблих (тих, які пропали безвісти) військовослужбовців, осіб рядового і начальницького складу органів внутрішніх справ, які загинули або померли внаслідок поранення, контузії чи каліцтва, одержаних під час участі в АТО, належать:                       
+                    </p>
+                        
+                    <p>
+                        - утриманці загиблого або того, хто пропав безвісти, яким у зв'язку з цим виплачується пенсія;<br />
+                        - батьки;<br />
+                        - один з подружжя, який не одружився вдруге, незалежно від того, виплачують йому пенсію чи ні;<br />
+                        - діти, які не мають (і не мали) своїх сімей;<br />
+                        - діти, які мають свої сім'ї, але стали інвалідами до досягнення повноліття;<br />
+                        - діти, обоє з батьків яких загинули або пропали безвісти.
+                    </p>
+                    <p>
+                        Також пільги, передбачені Законом про ветеранів війни, діятимуть для:
+                    </p>
+                    <p>
+                        - дружин (чоловіків) померлих учасників бойових дій, визнаних за життя інвалідами від загального захворювання, трудового каліцтва та з інших причин, які не одружилися вдруге;<br />
+                        - дітей померлих учасників бойових дій, які навчаються за денною формою навчання у вишах I-IV рівнів акредитації та професійно-технічних навчальних закладах, до закінчення цих навчальних закладів, але не довше ніж до досягнення ними 23 років.
+                       
+                    </p>
+                    <p>
+                        До речі, в силу норми пп. 281.1.4 ПКУ указані члени сімей учасників бойових дій звільнені від сплати земельного податку.
+                    </p>
+                    <p>
+                        Юнаки з числа дітей учасників бойових дій мають першочергове право при рівності набраних балів на зарахування до ліцеїв з посиленою військово-фізичною підготовкою (п. 7 Правил № 266/222/363).
+                    </p>
+                     <p>
+                           Крім того, на дружин (чоловіків), якщо вони не взяли повторний шлюб, і батьків військовослужбовців, осіб начальницького і рядового складу органів внутрішніх справ, які померли (загинули) у період проходження військової служби (виконання службових обов'язків) чи після звільнення із служби, але внаслідок поранення, контузії, каліцтва, отриманих при виконанні відповідних обов’язків, поширюється право на призначення дострокової пенсії за віком, встановлене абз. 6 п. 3 р. XV Закону № 1058.
+                        </p>
+                        <p>
+                            Ще одна пільга стосується медобслуговування. Члени сімей військовослужбовців, які загинули (померли), пропали безвісти, стали інвалідами під час проходження військової служби або постраждали у полоні в ході бойових дій (війни), якщо ці особи прослужили у Збройних Силах чи інших військових формуваннях та правоохоронних органах не менш як 20 календарних років, мають право на медичне обслуговування у закладах Міноборони України, інших військових формувань та правоохоронних органів (абз. 2 п. 2 ст. 11 Закону про захист військовослужбовців).
+                        </p>
+                        <p><h2 class="heading h2 margin_bottom10">Увага новація!:</h2>
+                        <h3 class="heading h3 margin_bottom10">
+                            12.06.15 р. набрав чинності Порядок № 348. Він передбачає надання з державного бюджету місцевим бюджетам субвенції. Останні спрямовують на придбання житла в прийнятих в експлуатацію новозбудованих житлових будинках (на первинному ринку) та на вторинному ринку для сімей загиблих військовослужбовців, які брали безпосередню участь в АТО, а також для інвалідів I - II групи серед військовослужбовців, які брали участь у зазначеній операції та потребують поліпшення житлових умов.</h3>
+                        </p>
+                        <p>
+                            Згідно з п. 13 цього Порядку допускається співфінансування придбання житла сім'ям військовослужбовців та інвалідам за рахунок коштів місцевих бюджетів, коштів сімей військовослужбовців та інвалідів, яким надається житло, або інших джерел, не заборонених законодавством.
+                        </p>
+                        <p><h2 class="heading h2 margin_bottom10">Увага новація!:</h2>
+                        <h3 class="heading h3 margin_bottom10">
+                         Із 19.06.15 р. завдяки Закону № 291 (коментар до нього читайте в газеті "Все про бухгалтерський облік" № 45 за 2015 р., стор. 15) чинність Закону про ветеранів війни поширюється на сім'ї осіб, які:</h3>
+                        </p>
+                        <p>
+                           - добровільно забезпечували (або добровільно залучалися до забезпечення) проведення АТО (у тому числі здійснювали волонтерську діяльність) та загинули (пропали безвісти), померли внаслідок поранення, контузії або каліцтва, одержаних під час забезпечення проведення АТО, перебуваючи безпосередньо в районах операції в період її проведення;<br />
+                           - перебуваючи у складі добровольчих формувань, утворених або самоорганізованих для захисту незалежності, суверенітету та територіальної цілісності України, загинули (пропали безвісти), померли внаслідок поранення, контузії або каліцтва, одержаних під час безпосередньої участі в АТО, забезпеченні її проведення, перебуваючи безпосередньо в районах операції в період її проведення. При цьому вказані добровольчі формування повинні бути включені до складу утворених відповідно до законів України військових формувань та правоохоронних органів або взаємодіяти з ними під час виконання завдань АТО.
+                        </p>
+                        <p>
+                            Зверніть увагу: право на отримання статусу особи, на яку поширюється Закон про ветеранів війни, мають і члени сімей указаних осіб, загиблих (пропалих безвісти), померлих до 19.06.15 р.
+                        </p>
+                        <p>
+                            Також Закон № 291 прямо поширив чинність Закону про ветеранів війни на сім'ї:
+                        </p>
+                        <p>
+                            - військовослужбовців (резервістів, військовозобов'язаних), працівників та інших осіб, зазначених у п. 19 ч. 1 ст. 6 Закону про ветеранів війни, які загинули (пропали безвісти), померли внаслідок поранення, контузії або каліцтва, одержаних під час безпосередньої участі в АТО, забезпеченні її проведення, перебуваючи безпосередньо в районах АТО;<br />
+                            -працівників юросіб, які залучалися до забезпечення проведення АТО та загинули (пропали безвісти), померли внаслідок поранення, контузії або каліцтва, одержаних під час забезпечення проведення АТО безпосередньо в районах та в період її проведення.
+                        </p>
+                        <p><h2 class="heading h2 margin_bottom10">Увага новація!:</h2>
+                        <h3 class="heading h3 margin_bottom10">
+                            Із 05.07.15 р. завдяки Закону № 425 держава повинна забезпечувати дітей учасників бойових дій, зазначених у п. 19 ч. 1 ст. 6 Закону про ветеранів війни (тобто дітей учасників АТО серед військовослужбовців і правоохоронців), державною цільовою підтримкою для здобуття професійно-технічної та вищої освіти в державних та комунальних навчальних закладах (ст. 19 Закону про охорону дитинства, ст. 441 Закону про профтехосвіту, ст. 44 Закону про вищу освіту).</h3>
+                        </p>
+                        <p>
+                            Указану підтримку надають як, зокрема:<br />
+                            - повну або часткову оплату навчання за рахунок бюджетних коштів;<br />
+                            - пільгові довгострокові кредити для здобуття освіти;<br />
+                            - соціальну стипендію;<br /> 
+                            - безоплатне забезпечення підручниками;<br />
+                            - безоплатний доступ до мережі Інтернет, систем баз даних у державних та комунальних навчальних закладах;<br />
+                            - безоплатне проживання в гуртожитку;<br />
+                            - інші заходи, затверджені Кабміном.
+                        </p>
+                        <p>
+                            Ця підтримка поширюється й на тих дітей, які навчаються за денною формою в професійно-технічних та вищих навчальних закладах, — до закінчення таких закладів, але не довше ніж до досягнення ними 23 років.
+                        </p>
+                        <p>
+                            Такі діти учасників бойових дій також отримують до закінчення навчальних закладів, але не довше ніж до досягнення ними 23 років, право на особливий соціальний захист у галузі професійно-технічної освіти (ст. 41 Закону про профтехосвіту).
+                        </p>
+                    <!--/text content-->
+                    <div class="clear20"></div>
+                    <div class="clear20"></div>
+                    <div class="clear20"></div>
+                      <div class="close"></div>
+                     <h1 class="heading h1 margin_bottom10">Центри допомоги учасникам АТО створені для допомоги демобілізованим учасникам АТО.</h1>                       
+                    
+                    <!--accordion-->
+                    <ul class="accordion-large">
+                    	<!--block-->
+                    	<li><a href="#" class="gray-only bold_only notextdecoration">Вінниця</a>
+                        	<div>
+                                <p>Вінницький ЦДУ АТО <br />
+                                   тел. (0432) 67-17-26
+                                </p>
+                            </div>
+                        </li>
+                    	<!--/block-->                        
+                        
+                    	<!--block-->                        
+                    	<li><a href="#" class="gray-only bold_only notextdecoration">Дніпропетровськ</a>
+                        	<div>
+                                <p>Дніпропетровський ЦДУ АТО 
+                                   тел. (056) 742 86 62, <br />
+                                   (068) 679 89 61, <br />
+                                   0 800 505 085
+                                </p>
+                            </div>
+                        </li>
+                    	<!--/block-->
+                        
+                        <!--block-->                        
+                    	<li><a href="#" class="gray-only bold_only notextdecoration">Волинський</a>
+                        	<div>
+	                            <p>Волинський ЦДУ АТО <br />
+                                   тел. +38 066 613 30 28
+                                </p>
+                            </div>
+                        </li>
+                    	<li><a href="#" class="gray-only bold_only notextdecoration">м. Краматорськ Донецької обл</a>
+                        	<div>
+                                <p>ЦДУ АТО у м. Краматорськ Донецької обл.<br /> 
+                                   тел. +38 066 809 98 48,<br />
+                                    +38 073 424 14 82 ,<br />
+                                    +38 096 119 65 66
+                                </p>
+                            </div>
+                        </li>
+                    	<!--/block-->
+
+                    	<!--block-->                                                
+                    	<li><a href="#" class="gray-only bold_only notextdecoration">Житомир</a>
+                        	<div>
+                                <p>
+                                Житомирський ЦДУ АТО<br /> 
+                                тел. (0412) 47-50-06,<br />
+                                (0412) 47-50-08
+                                </p>
+                            </div>
+                        </li>    
+                    	<!--/block-->  
+                        <!--block-->
+                    	<li><a href="#" class="gray-only bold_only notextdecoration">Закарпаття</a>
+                        	<div>
+                                <p>Закарпатський ЦДУ АТО<br />  
+                                   тел. (0312) 61-74-76,<br />  
+                                   (0312) 61-54-05
+                                </p>
+                            </div>
+                        </li>
+                    	<!--/block-->                        
+                        
+                    	<!--block-->                        
+                    	<li><a href="#" class="gray-only bold_only notextdecoration">Запоріжжя</a>
+                        	<div>
+                                <p>Запорізький ЦДУ АТО<br />  
+                                   тел. +38 (0612) 362525,<br />  
+                                   +380500700406
+                                </p>
+                            </div>
+                        </li>
+                    	<!--/block-->
+                        
+                        <!--block-->                        
+                    	<li><a href="#" class="gray-only bold_only notextdecoration">Івано-Франківськ</a>
+                        	<div>
+	                            <p>Ивано-Франківський ЦДУ АТО<br /> 
+                                  тел. +38 066 465 03 67,<br /> 
+                                  +38 068 453 88 28 ,<br /> 
+                                  +38 093 255 18 82,<br /> 
+                                  (0342) 55 22 99
+                                </p>
+                            </div>
+                        </li>
+                    	<li><a href="#" class="gray-only bold_only notextdecoration">Київ</a>
+                        	<div>
+                                <p>ЦДУ АТО в Київській обл.<br /> 
+                                    тел. 0 800 213 015 
+                                </p>
+                            </div>
+                        </li>
+                    	<!--/block-->
+
+                    	<!--block-->                                                
+                    	<li><a href="#" class="gray-only bold_only notextdecoration">Кіровоград</a>
+                        	<div>
+                                <p>
+                                Кіровоградський ЦДУ АТО <br />
+                                тел. +38 050 029 82 22,<br /> 
+                                +38 098 029 82 22
+                                </p>
+                            </div>
+                        </li>    
+                    	<!--/block--> 
+
+                        <!--block-->                                                
+                        <li><a href="#" class="gray-only bold_only notextdecoration"> м. Сіверодонецьк Луганської обл.</a>
+                            <div>
+                                <p>
+                                ЦДУ АТО у м. Сіверодонецьк Луганської обл.<br /> 
+                                тел. +38 097 070 52 25
+                                </p>
+                            </div>
+                        </li>    
+                        <!--/block--> 
+
+                        <!--block-->                                                
+                        <li><a href="#" class="gray-only bold_only notextdecoration">Львів</a>
+                            <div>
+                                <p>
+                                Львівський ЦДУ АТО<br /> 
+                                тел. +38 032 255 42 96
+                                </p>
+                            </div>
+                        </li>    
+                        <!--/block--> 
+
+                        <!--block-->                                                
+                        <li><a href="#" class="gray-only bold_only notextdecoration">Миколаїв</a>
+                            <div>
+                                <p>
+                                Миколаївський ЦДУ АТО<br /> 
+                                тел. (0512) 37 02 22,<br /> 
+                                + 093 355 44 08,<br /> 
+                                +38 097 618 96 16
+                                </p>
+                            </div>
+                        </li>    
+                        <!--/block--> 
+
+                        <!--block-->                                                
+                        <li><a href="#" class="gray-only bold_only notextdecoration">Одесса</a>
+                            <div>
+                                <p>
+                                Одеський ЦДУ АТО <br /> 
+                                тел. (0482) 39 00 04,<br />  
+                                (0482) 39 00 05
+                                </p>
+                            </div>
+                        </li>    
+                        <!--/block--> 
+
+                        <!--block-->                                                
+                        <li><a href="#" class="gray-only bold_only notextdecoration">Полтава</a>
+                            <div>
+                                <p>
+                                  Полтавський ЦДУ АТО <br />
+                                  тел. +38 066 992 14 74,<br /> 
+                                  +38 097 193 47 34
+                                </p>
+                            </div>
+                        </li>    
+                        <!--/block--> 
+                        <!--block-->                                                
+                        <li><a href="#" class="gray-only bold_only notextdecoration">Рівне</a>
+                            <div>
+                                <p>
+                                Рівненський ЦДУ АТО<br /> 
+                                тел. +38 050 663 60 90 ,<br />  
+                                +38 068 850 40 10
+                                </p>
+                            </div>
+                        </li>    
+                        <!--/block--> 
+                        <!--block-->                                                
+                        <li><a href="#" class="gray-only bold_only notextdecoration">Сумми</a>
+                            <div>
+                                <p>
+                                Сумський ЦДУ АТО<br /> 
+                                тел. +38 095 038 32 82,<br /> 
+                                +38 097 665 91 31,<br /> 
+                                +38 093 829 19 99
+                                </p>
+                            </div>
+                        </li>    
+                        <!--/block--> 
+                        <!--block-->                                                
+                        <li><a href="#" class="gray-only bold_only notextdecoration">Тернопіль</a>
+                            <div>
+                                <p>
+                                Тернопільський ЦДУ АТО<br /> 
+                                тел. +38 098 596 26 80,<br /> 
+                                +38 067 381 44 99,<br /> 
+                                +38 097 205 50 55
+                                </p>
+                            </div>
+                        </li>    
+                        <!--/block--> 
+                        <!--block-->                                                
+                        <li><a href="#" class="gray-only bold_only notextdecoration">Харків</a>
+                            <div>
+                                <p>
+                                Харківський ЦДУ АТО<br /> 
+                                тел. (57) 712 46 27
+                                </p>
+                            </div>
+                        </li>    
+                        <!--/block--> 
+                        <!--block-->                                                
+                        <li><a href="#" class="gray-only bold_only notextdecoration">Херсон</a>
+                            <div>
+                                <p>
+                                  Херсонський ЦДУ АТО<br />  
+                                  тел. (0552) 45-52-80
+                                </p>
+                            </div>
+                        </li>    
+                        <!--/block--> 
+                        <!--block-->                                                
+                        <li><a href="#" class="gray-only bold_only notextdecoration">Хмельницьк</a>
+                            <div>
+                                <p>
+                                Хмельницький ЦДУ АТО<br />  
+                                тел. (0382) 65-90-70,<br />  
+                                +38 067 380 50 65
+                                </p>
+                            </div>
+                        </li>    
+                        <!--/block--> 
+                        <!--block-->                                                
+                        <li><a href="#" class="gray-only bold_only notextdecoration">Черкаси</a>
+                            <div>
+                                <p>
+                                  Черкаський ЦДУ АТО<br />
+                                  тел. 0800 508 876
+                                </p>
+                            </div>
+                        </li>    
+                        <!--/block--> 
+                        <!--block-->                                                
+                        <li><a href="#" class="gray-only bold_only notextdecoration">Чернигів</a>
+                            <div>
+                                <p>
+                                  Чернигівський ЦДУ АТО<br /> 
+                                  тел. +38 093 343 23 32,<br /> 
+                                  +38 067 464 35 53,<br /> 
+                                  +38 050 493 43 53
+                                </p>
+                            </div>
+                        </li>    
+                        <!--/block--> 
+
+                        <!--block-->                                                
+                        <li><a href="#" class="gray-only bold_only notextdecoration">Чернівці</a>
+                            <div>
+                                <p>
+                                  Чернівецький ЦДУ АТО<br />  
+                                  тел. (0372)4-66-69
+                                </p>
+                            </div>
+                        </li>    
+                        <!--/block-->                                                                                                                                          
+                    </ul>                    
+                    <!--accordion-->
+                </div>
+              </div>
+                
+              <!--/page content goes here-->                
+                
+            </div>
+            <!-- /content container-->
+
+	        <div class="clear40"></div>
+	
+        </div>
+        <!--/page content wrapper-->
+        
+        <!--footer-->
+        <div id="footer_container">
+            <div id="footer" class="center-clear">
+                <ul>
+                    <li><a href="index.html" class="active">Головна</a></li>
+                    <li><a href="maps.html">Карта</a></li>
+                    <li><a href="#">Пільги</a></li>
+                    <li><a href="#">Освіта</a></li>
+                    <li><a href="#">Лікування</a></li>
+                    <li><a href="contact.html">Контакти</a></li>
+                    <li><a href="comens.html">Kоментарі</a></li>
+                </ul>
+                 <div>Інформаційний сайт - Твої права.Життя після АТО.</div>
+            </div>
+        </div>
+        <!-- /footer-->
+    
+    <!--/body wrapper-->    
+</body>
+<!-- /body -->
+
+</html>

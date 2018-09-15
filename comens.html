@@ -1,0 +1,306 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ваші коментарі</title>
+<link href='http://fonts.googleapis.com/css?family=Terminal+Dosis:400,700,800,600,500,300,200' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<link rel="stylesheet" type="text/css" href="css/default.css"/>
+<link rel="shortcut icon" href="icon.ico" type="image/i-icon" />
+
+<!--jquery library-->
+<script type="text/javascript" src="scripts/jquery-1.7.1.min.js"></script>
+<!--/jquery library-->
+
+<!--jquery easing-->
+<script type="text/javascript" src="scripts/jquery.easing.1.3.js"></script>
+<!--/jquery easing-->
+
+<!--nivo slider plugin for jquery-->
+<script type="text/javascript" src="scripts/nivo-slider/jquery.nivo.slider.js"></script>
+<link rel="stylesheet" type="text/css" href="scripts/nivo-slider/nivo-slider.css"/>
+<!--/ nivo slider plugin for jquery-->
+
+<!--superfish dropdown-->
+<link rel="stylesheet" type="text/css" href="scripts/superfish/css/superfish.css"/>
+<script type="text/javascript" src="scripts/superfish/js/superfish.js"></script>
+<script type="text/javascript" src="scripts/superfish/js/hoverIntent.js"></script>
+<script type="text/javascript" src="scripts/superfish/js/jquery.bgiframe.min.js"></script>
+<script type="text/javascript" src="scripts/superfish/js/supersubs.js"></script>
+<!--/superfish dropdown-->
+
+<!--auto complete-->
+<script type='text/javascript' src='scripts/autocomplete/jquery.autocomplete.min.js'></script>
+<link rel="stylesheet" type="text/css" href="scripts/autocomplete/jquery.autocomplete.css" />
+<!--/auto complete-->
+
+<!--misc. scripts-->
+<script type="text/javascript" src="scripts/scripts.js"></script>
+<!--/misc. scripts-->
+
+<!-- comens vk-->
+  <script src="https://vk.com/js/api/openapi.js" type="text/javascript"></script>
+  <script type="text/javascript">
+  VK.init({apiId: 5481791, onlyWidgets: true});
+</script>
+<!-- /comens vk-->
+<!-- comens fk-->
+<meta property="fb:admins" content="333691845"/>
+<!-- /comens fk-->
+</head>
+<script type="text/javascript"> 
+    document.ondragstart = noselect; // запрет на перетаскивание
+    document.onselectstart = noselect; // запрет на выделение элементов страницы 
+    document.oncontextmenu = noselect; // запрет на выведение контекстного меню 
+    function noselect() {return false;} 
+</script>
+<!--body-->
+<body onmousedown="return false;" onclick="return true;">
+<!-- fk -->
+ <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.6";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- /fk -->
+    <!--sliding login panel-->
+    <div id="login_panel">
+        <div id="content">
+            <div>
+                <div class="column column1">
+                    <!--help text, maybe-->
+                    <h3>Інформаційний сайт для учасників бойових дій:</h3>
+                    <p>
+                      Сайт призначений для надання інформаційної підтримки учасникам бойових дій АТО. Містить базу інформації про реабілітацію, освіту та пільги.
+                    </p>
+                    <p>
+                        Для того, щоб залишати свої коментарі та пропозиції на сайті необхідно пройти реєстрацію.  
+                    </p>                    
+                    <p>
+                        <a href="#" class="orange-only notextdecoration">Ще не зареєстровані ? Зареєструватись ?</a>
+                    </p>
+                
+                </div>
+                                
+                <div class="column column2">
+                    <!--user signin-->
+                    <h3>Вхід на сайт:</h3>
+                    <form name="contact_form" id="contact_form" class="generic-form alignleft_block" action="contact.html">
+                        <p>
+                            <input type="text" name="txt_name" id="txt_name" class="validate[required] medium-login user margin-right-10" />
+                            <input type="text" name="txt_email" id="txt_email" class="validate[required] medium-login password" />
+                        </p>
+                        <div class="clear10"></div>                                                
+                        <p>
+                            <input type="checkbox" id="chk_rememberme" name="chk_rememberme" /><label for="chk_rememberme">Запам'ятати мене</label>
+                            &nbsp;/&nbsp;
+                            <a href="#" class="orange-only notextdecoration">Нагадати пароль?</a>
+                        </p>                     
+                           
+                        <div class="clear"></div>
+                        
+                        <a href="#" class="button alignleft_block bold_only notextdecoration" id="btnLoginNow"><span>Увійти</span></a>
+
+                    </form>
+                    <!--/user login-->
+                </div>
+            </div>
+        </div>
+        <div id="signin_register">
+            <ul>
+                <li>Вітаємо на сайті!</li>
+                <li><a href="#">&nbsp;</a></li>
+            </ul>
+        </div>
+    </div>      
+    <!--/sliding login panel-->
+
+	<!--top anchor-->
+    <a name="top"></a>
+    
+    <!--body wrapper-->
+    <div id="body-wrapper">
+    
+    	<div id="page-header-wrapper">
+    
+        <!--header container-->
+        <div id="header-contanier">    
+        
+            <!--header wrapper-->
+            <div id="header" class="center-clear">   
+                
+                <!--banner 468x60-->
+                    <img class="banner" src="images/temp/47776.jpg" width="970" height="250" alt="banner" />
+                <!-- /banner 468x60-->                
+                                       
+                <!--header place holder-->
+                <div class="header-place-holder"></div>
+                
+                <!--social tabs-->
+                <ul id="social_tabs">
+                    <li><a href="https://twitter.com/vsedopomogaATO" target="_blank"><img src="images/social_icons/t.png" width="30" height="27" alt="" /></a></li>
+                    <li><a href="https://www.facebook.com/vsedopomogaATO" target="_blank"><img src="images/social_icons/f.png" width="30" height="27" alt="" /></a></li>
+                    <li><a href="http://vk.com/vsedopomogaato" target="_blank"><img src="images/social_icons/v.png" width="30" height="27" alt="" /></a></li>
+                </ul>
+                <!-- /social tabs-->
+                
+                <!--menu-->
+                <ul id="top_menu" class="sf-menu">
+                    <li><a href="index.html">Головна</a><span>Початок сайту</span></li>
+                    <li><a href="#.html">Карта</a><span>З чого потрібно почати</span>
+                        <!--first level dropdown menu-->
+                        <ul>
+                            <li><a href="maps.html">Документи</a></li>
+                            <li><a href="social_sl.html">Соціальні служби</a></li>
+                            <li><a href="famile.html">Діти сім'я</a></li>                                                         
+                        </ul>
+                        <!--/first level dropdown menu-->                        
+                    </li>
+                    <li><a href="#">Пільги</a><span>Необхідні данні</span>
+                        <!--first level dropdown menu-->
+                        <ul>
+                             <li><a href="#">Земельне законодавство</a></li>
+                             <li><a href="#">Отримання статусу</a>
+                                <!--second level dropdown menu-->
+                                <ul>
+                                    <li><a href="#">Демобілізований</a></li>            
+                                    <li><a href="#">Сім'я загиблого</a></li>
+                                </ul>
+                                 <!--/second level dropdown menu-->
+                             </li>
+                             <li><a href="#">Отримання житла</a></li>
+                             <li><a href="#">Податкове законодавство</a></li>
+                             <li><a href="#">Отримання кредитів</a></li>
+                             <li><a href="#">Виплати</a></li>                                 
+                             <li><a href="#">Юридична допомога</a></li>
+                             <li><a href="#">Волонтерські організації<br>(контакти)</a></li>
+                        </ul>
+                        <!--/first level dropdown menu-->                        
+                    </li>
+                    <li><a href="#">Освіта</a><span>Що потрібно знати</span>
+                        <!--first level dropdown menu-->
+                        <ul>
+                            <li><a href="#">Закон про освіту</a></li>                        
+                     <li><a href="institut.html">Вищі навчальні заклади</a></li>
+                        </ul>
+                        <!--/first level dropdown menu-->                        
+                    </li>
+                    <li><a href="#">Лікування</a><span>Відпочинок</span>
+                        <!--first level dropdown menu-->
+                        <ul>
+                            <li><a href="#">Закон про лікування</a></li>
+                            <li><a href="#">Психологічна реабілітація</a></li>
+                            <li><a href="#">Санаторне лікування</a></li>
+                        </ul>
+                        <!--/first level dropdown menu-->                        
+                    </li>                                                                
+                    <li><a href="contact.html">Контакти</a><span>Необхідні контакти</span></li> 
+
+                    <li><a href="comens.html">Kоментарі</a><span>Ваші конентарі</span></li>         
+                </ul>
+                <!-- /menu-->
+                
+                <!--search box-->
+                <div id="search_box">
+                    <form method="post" name="form_search" id="form_search" class="form_search" action="#">
+                        <input type="text" name="txt_search" id="txt_search" class="txt_search" value="пошук..." />
+                        <input type="submit" name="btn_search" id="btn_search" class="btn_search" value="" />
+                    </form>
+                </div>
+                <!-- /search box-->
+                
+            </div>
+            
+        </div>
+                <!-- /header wrapper-->
+                
+            </div>
+            <!-- /header container-->
+
+	        <div class="clear40"></div>
+                       
+            <!--bread crumb-->
+            <div class="center-clear">
+                <div id="breadcrumb" class="page-columns-head-style gray-frame">
+                    <ul>
+                        <li><a href="index.html">Головна</a></li>
+                        <li><a href="comens.html" class="active">Коментарі</a></li>
+                    </ul>
+                </div>
+			</div>                
+            <!--/bread crumb-->
+            
+        </div>
+        <!--/page header wrapper-->
+        
+        
+        <!--page content wrapper-->
+        <div id="page-content-wrapper">        
+        
+            <!--content container-->
+            <div class="center-clear page-content-wrapper">
+                
+                <div class="page-content gray-frame alignleft_block full-content-width">
+                    <!-- left block -->
+                        <div class="alignleft_block margin-right-20 width-310">
+                        <h1 class="heading h1">Коментарі на Фейсбук:</h1>
+                        <!-- <p class="bold_only" style="text-align: justify;">Ваші коментарі з приводу інформації на сайті.</p> -->
+                        <div class="fb-comments" data-href="http://www.dmitrijukrain.ho.ua/" data-width="460" data-numposts="10" data-colorscheme="light"></div>
+                    	<div class="clear50"></div>
+                    </div>
+                    <!--/left block-->
+                    
+                    <!--right block-->
+                      <h1 class="heading h1">Коментарі Вконтакті:</h1>
+                      <p class="bold_only" style="text-align: justify;">Ваші коментарі з приводу інформації на сайті.</p>
+                      <div class="hr-two_right"></div>
+                      <div class="alignleft_block">
+                      <div id="vk_comments"></div>
+                      <script type="text/javascript">
+                        VK.Widgets.Comments("vk_comments", {limit: 10, width: "460", attach: "*"});
+                      </script>
+                    <div class="clear10"></div>
+                        <div class="clear10"></div>
+                    </div>
+                    
+		            <div class="clear20"></div>  
+                    <h1 class="heading h1"><a href="https://docs.google.com/forms/d/10jZTxNeCxCZpADBRiewuq96F-MuYRutJZ6pUxeREY9g/viewform" target="_blank">Анкета учасника АТО який шукає роботу:</a></h1>
+                    <iframe src="https://docs.google.com/forms/d/10jZTxNeCxCZpADBRiewuq96F-MuYRutJZ6pUxeREY9g/viewform?embedded=true" width="960" height="1000" frameborder="0" marginheight="0" marginwidth="0">Загрузка...</iframe>     
+                </div>
+                <!--/right block-->
+                   
+            </div>
+            <!-- /content container-->
+    	
+            <div class="clear40"></div>
+
+        </div>
+        <!--/page content wrapper-->
+
+        <!--footer-->
+       <div id="footer_container">
+            <div id="footer" class="center-clear">
+                <ul>
+                    <li><a href="index.html" class="active">Головна</a></li>
+                    <li><a href="maps.html">Карта</a></li>
+                    <li><a href="#">Пільги</a></li>
+                    <li><a href="#">Освіта</a></li>
+                    <li><a href="#">Лікування</a></li>
+                    <li><a href="contact.html">Контакти</a></li>
+                    <li><a href="comens.html">Kоментарі</a></li>
+                </ul>
+                <div>Інформаційний сайт - Твої права.Життя після АТО.
+                </div>
+            </div>
+        </div>
+        <!-- /footer-->
+
+    <!--/body wrapper-->    
+</body>
+<!-- /body -->
+
+</html>

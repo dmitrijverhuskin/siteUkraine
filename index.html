@@ -1,0 +1,418 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Інформаційний сайт для учасників бойових дій</title>
+<link href='http://fonts.googleapis.com/css?family=Terminal+Dosis:400,700,800,600,500,300,200' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<link rel="stylesheet" type="text/css" href="css/default.css"/>
+<link rel="shortcut icon" href="icon.ico" type="image/i-icon" />
+
+<!--jquery library-->
+<script type="text/javascript" src="scripts/jquery-1.7.1.min.js"></script>
+<!--/jquery library-->
+
+<!--jquery easing-->
+<script type="text/javascript" src="scripts/jquery.easing.1.3.js"></script>
+<!--/jquery easing-->
+
+<!--nivo slider plugin for jquery-->
+<script type="text/javascript" src="scripts/nivo-slider/jquery.nivo.slider.js"></script>
+<link rel="stylesheet" type="text/css" href="scripts/nivo-slider/nivo-slider.css"/>
+<link rel="stylesheet" type="text/css" href="scripts/nivo-slider/themes/default/default.css"/>
+<!--/ nivo slider plugin for jquery-->
+
+<!--superfish dropdown-->
+<link rel="stylesheet" type="text/css" href="scripts/superfish/css/superfish.css"/>
+<script type="text/javascript" src="scripts/superfish/js/superfish.js"></script>
+<script type="text/javascript" src="scripts/superfish/js/hoverIntent.js"></script>
+<script type="text/javascript" src="scripts/superfish/js/jquery.bgiframe.min.js"></script>
+<script type="text/javascript" src="scripts/superfish/js/supersubs.js"></script>
+<!--/superfish dropdown-->
+
+<!--auto complete-->
+<script type='text/javascript' src='scripts/autocomplete/jquery.autocomplete.min.js'></script>
+<link rel="stylesheet" type="text/css" href="scripts/autocomplete/jquery.autocomplete.css" />
+<!--/auto complete-->
+
+<!--misc. scripts-->
+<script type="text/javascript" src="scripts/scripts.js"></script>
+<script type="text/javascript" src="scripts/jquery-backgroundpos/jquery.backgroundpos.pack.js"></script>
+<!--/misc. scripts-->
+
+<script type="text/javascript" src="scripts/demo/colorpicker/js/colorpicker.js"></script>
+<link rel="stylesheet" type="text/css" href="scripts/demo/colorpicker/css/colorpicker.css" />
+<script type="text/javascript" src="scripts/demo/demo.js"></script>
+<script type="text/javascript"> 
+    document.ondragstart = noselect; // запрет на перетаскивание
+    document.onselectstart = noselect; // запрет на выделение элементов страницы 
+    document.oncontextmenu = noselect; // запрет на выведение контекстного меню 
+    function noselect() {return false;} 
+</script>
+</head>
+
+<!--body-->
+<body  onmousedown="return false;" onclick="return true;"> 
+  <!--sliding login panel-->
+	<div id="login_panel">
+    	<div id="content">
+        	<div>
+				<div class="column column1">
+	            	<!--help text, maybe-->
+                    <h3>Інформаційний сайт для учасників бойових дій:</h3>
+                    <p>
+	                  Сайт призначений для надання інформаційної підтримки учасникам бойових дій АТО. Містить базу інформації про реабілітацію, освіту та пільги.
+                    </p>
+                    <p>
+	                    Для того, щоб залишати свої коментарі та пропозиції на сайті необхідно пройти реєстрацію.  
+                    </p>                    
+                    <p>
+                        <a href="#" class="orange-only notextdecoration">Ще не зареєстровані ? Зареєструватись ?</a>
+                    </p>
+	            
+                </div>
+                                
+				<div class="column column2">
+	                <!--user signin-->
+                    <h3>Вхід на сайт:</h3>
+                    <form name="contact_form" id="contact_form" class="generic-form alignleft_block" action="contact.html">
+                        <p>
+                            <input type="text" name="txt_name" id="txt_name" class="validate[required] medium-login user margin-right-10" />
+                            <input type="text" name="txt_email" id="txt_email" class="validate[required] medium-login password" />
+                        </p>
+                        <div class="clear10"></div>                                                
+                        <p>
+                            <input type="checkbox" id="chk_rememberme" name="chk_rememberme" /><label for="chk_rememberme">Запам'ятати мене</label>
+                            &nbsp;/&nbsp;
+                            <a href="#" class="orange-only notextdecoration">Нагадати пароль?</a>
+						</p>                     
+                           
+                        <div class="clear"></div>
+                        
+                        <a href="#" class="button alignleft_block bold_only notextdecoration" id="btnLoginNow"><span>Увійти</span></a>
+
+                    </form>
+	                <!--/user login-->
+                </div>
+            </div>
+        </div>
+    	<div id="signin_register">
+            <ul>
+                <li>Вітаємо на сайті!</li>
+                <li><a href="#">&nbsp;</a></li>
+            </ul>
+    	</div>
+    </div>    
+    <!--/sliding login panel-->
+
+	<div id="body-wrapper">
+        
+        <!--header container-->
+        <div id="header-contanier">    
+        
+            <!--header wrapper-->
+            <div id="header" class="center-clear">   
+                
+                <!--banner 468x60-->
+                    <img class="banner" src="images/temp/47776.jpg" width="970" height="250" alt="banner" />
+                <!-- /banner 468x60-->                
+                                       
+                <!--header place holder-->
+                <div class="header-place-holder"></div>
+                
+                <!--social tabs-->
+                <ul id="social_tabs">
+                    <li><a href="https://twitter.com/vsedopomogaATO" target="_blank"><img src="images/social_icons/t.png" width="30" height="27" alt="" /></a></li>
+                    <li><a href="https://www.facebook.com/vsedopomogaATO" target="_blank"><img src="images/social_icons/f.png" width="30" height="27" alt="" /></a></li>
+                    <li><a href="http://vk.com/vsedopomogaato" target="_blank"><img src="images/social_icons/v.png" width="30" height="27" alt="" /></a></li>
+                </ul>
+                <!-- /social tabs-->
+                
+                <!--menu-->
+                <ul id="top_menu" class="sf-menu">
+                    <li><a href="index.html">Головна</a><span>Початок сайту</span></li>
+                    <li><a href="#.html">Карта</a><span>З чого потрібно почати</span>
+                        <!--first level dropdown menu-->
+                        <ul>
+                            <li><a href="maps.html">Документи</a></li>
+                            <li><a href="social_sl.html">Соціальні служби</a></li>
+                            <li><a href="famile.html">Діти сім'я</a></li>                                                         
+                        </ul>
+                        <!--/first level dropdown menu-->                        
+                    </li>
+                    <li><a href="#">Пільги</a><span>Необхідні данні</span>
+                        <!--first level dropdown menu-->
+                        <ul>
+                             <li><a href="#">Земельне законодавство</a></li>
+                             <li><a href="#">Отримання статусу</a>
+                                <!--second level dropdown menu-->
+                                <ul>
+                                    <li><a href="#">Демобілізований</a></li>            
+                                    <li><a href="#">Сім'я загиблого</a></li>
+                                </ul>
+                                 <!--/second level dropdown menu-->
+                             </li>
+                             <li><a href="#">Отримання житла</a></li>
+                             <li><a href="#">Податкове законодавство</a></li>
+                             <li><a href="#">Отримання кредитів</a></li>
+                             <li><a href="#">Виплати</a></li>                                 
+                             <li><a href="#">Юридична допомога</a></li>
+                             <li><a href="#">Волонтерські організації<br>(контакти)</a></li>
+                        </ul>
+                        <!--/first level dropdown menu-->                        
+                    </li>
+                    <li><a href="#">Освіта</a><span>Що потрібно знати</span>
+                        <!--first level dropdown menu-->
+                        <ul>
+							<li><a href="#">Закон про освіту</a></li>                        
+                     <li><a href="institut.html">Вищі навчальні заклади</a></li>
+                        </ul>
+                        <!--/first level dropdown menu-->                        
+                    </li>
+                    <li><a href="#">Лікування</a><span>Відпочинок</span>
+                        <!--first level dropdown menu-->
+                        <ul>
+                            <li><a href="#">Закон про лікування</a></li>
+                            <li><a href="#">Психологічна реабілітація</a></li>
+                            <li><a href="#">Санаторне лікування</a></li>
+                        </ul>
+                        <!--/first level dropdown menu-->                        
+                    </li>                                                                
+                    <li><a href="contact.html">Контакти</a><span>Необхідні контакти</span></li>
+                    <li><a href="comens.html">Kоментарі</a><span>Ваші конентарі</span></li>          
+                </ul>
+                <!-- /menu-->
+                
+                <!--search box-->
+                <div id="search_box">
+                    <form method="post" name="form_search" id="form_search" class="form_search" action="all_elements.html">
+                        <input type="text" name="txt_search" id="txt_search" class="txt_search" value="пошук..." />
+                        <input type="submit" name="btn_search" id="btn_search" class="btn_search" value="" />
+                    </form>
+                </div>
+                <!-- /search box-->
+                
+            </div>
+            
+        </div>
+        <!-- /header wrapper-->
+        
+        <div class="clear20"></div>
+        
+        <!--content container-->
+        <div id="content_container" class="center-clear">
+            
+            <!--carousel-->
+            <div id="carousel_container">
+                <!--nivo slider-->
+                <div class="theme-default">
+					<div class="ribbon"></div>                
+                    <div id="slider3" class="nivoSlider">
+                        <a href="#"><img src="images/temp/slider0.jpg" width="970" height="360" alt="" title="#slider3-caption-0"/></a>
+                        <a href="#"><img src="images/temp/slider1.jpg" width="970" height="360" alt=""/></a>
+                        <a href="#"><img src="images/temp/slider2.jpg" width="970" height="360" alt="" title="#slider3-caption-1"/></a>
+                        <a href="#"><img src="images/temp/slider3.jpg" width="970" height="360" alt="" /></a>
+                    </div>
+                </div>
+                <!--/nivo slider-->
+            </div>
+	                <div id="slider3-caption-0" class="nivo-html-caption"><h1>Єдиний народ.</h1><p>Єдина країна. Ми Україна.</p></div>
+    	            <div id="slider3-caption-1" class="nivo-html-caption"><h1>Єдиний народ.</h1><p>Єдина країна. Ми Україна.</p></div>
+            
+            <!-- /carousel -->
+            
+            <div class="clear40"></div>
+            
+            <!-- three box -->       
+            <div class="box-three nomargin featured-box transparent-background">
+                <div>
+                    <!-- featured image -->
+                    <div class="home-three-box-sliding-image img-one"></div>
+                    <div>
+                        <!-- featured title -->
+                        <h3>Про пільги щодо вступу</h3>
+                        <div class="clear"></div> 
+                        <!-- text-->
+                        <span>
+                            <a href="#">Наближається вступна кампанія. Нас у першу чергу цікавить питання справедливих пільг для учасників бойових дій та їхніх дітей. Право на позаконкурсний вступ мають діти учасників бойових дій.</a>
+                        </span>
+                    </div>
+                </div>        
+            </div>
+
+            <div class="box-three featured-box transparent-background">
+                <div>
+                    <!-- featured image -->
+                    <div class="home-three-box-sliding-image img-two"></div>
+                    <div>
+                        <!-- featured title -->
+                        <h3>ХОСТЕЛИ</h3>
+                        <div class="clear"></div> 
+                        <!-- text-->
+                        <span>
+                            <a href="#">ХОСТЕЛИ, тимчасовий притулок для захисників – (база контактів).</a><br />
+                        </span>
+                    </div>
+                </div>       
+            </div>
+
+            <div class="box-three featured-box transparent-background featured-box-last">
+                <div>
+                    <!-- featured image -->
+                    <div class="home-three-box-sliding-image img-three"></div>
+                    <div>
+                        <!-- featured title -->
+                        <h3>Житло для учасників АТО</h3>
+                        <div class="clear"></div> 
+                        <!-- text-->
+                        <span>
+                            <a href="#">Проектом Закону “Про внесення змін до статті 4 Закону України (щодо реалізації державних житлових програм) передбачено збільшити державну підтримку учасникам АТО при придбанні доступного житла до 50%.</a>
+                        </span>
+                    </div>
+                </div>        
+            </div>        
+            <!-- /three box -->
+
+            <div class="box-three nomargin featured-box transparent-background">
+                <div>
+                    <!-- featured image -->
+                    <div class="home-three-box-sliding-image img-one1"></div>
+                    <div>
+                        <!-- featured title -->
+                        <h3>Психологічна допомога онлайн</h3>
+                        <div class="clear"></div> 
+                        <!-- text-->
+                        <span>
+                            <a href="http://datacloud.me/CUF-OSI/uk/index.php" target="_blank">Для психологічної допомоги бійцям АТО та їхнім родинам в Україні існує інтерактивний ресурс www.dopomoga.life
+                            Цей ресурс, заснований українсько-канадською фундацією, являє собою мобільну психологічну допомогу. </a>
+                        </span>
+                    </div>
+                </div>        
+            </div>
+
+            <div class="box-three featured-box transparent-background">
+                <div>
+                    <!-- featured image -->
+                    <div class="home-three-box-sliding-image img-two1"></div>
+                    <div>
+                        <!-- featured title -->
+                        <h3>Книги для бійців АТО</h3>
+                        <div class="clear"></div> 
+                        <!-- text-->
+                        <span>
+                            <a href="https://docs.google.com/forms/d/1guWGKXBB1YBh2N3E8dAeYQ-GRdFp3VfgohCSXtXgt2w/viewform?c=0&w=1" target="_blank">Чтение хорошей книги успокаивает и помогает бойцам отвлечься от ужасов войны, которые они видят каждый день. Книги поддерживают их на пути выздоровления после травм и ранений.</a><br />
+                        </span>
+                    </div>
+                </div>       
+            </div>
+
+            <div class="box-three featured-box transparent-background featured-box-last">
+                <div>
+                    <!-- featured image -->
+                    <div class="home-three-box-sliding-image img-three1"></div>
+                    <div>
+                        <!-- featured title -->
+                        <h3>Роз'яснення щодо статусу</h3>
+                        <div class="clear"></div> 
+                        <!-- text-->
+                        <span>
+                            <a href="http://zakon5.rada.gov.ua/rada/show/n0002875-15" target="_blank">Що стосується бійців добровольчих батальйонів, діючим на сьогодні Порядком надання статусу учасника бойових дій особам, які захищали незалежність, суверенітет та територіальну цілісність України і брали безпосередню участь в антитерористичній операції.</a>
+                        </span>
+                    </div>
+                </div>        
+            </div>        
+            <!-- /three box -->
+            
+            <div class="clear20"></div>        
+            
+            <!-- three box footer-->      
+            <div class="box-three-sub-wrapper transparent-background"> 
+                <div class="box-three featured-box-sub nomargin">
+                    <div>
+                        <div>
+                            <!-- sub featured title -->
+                            <h3>Інформаційний сайт:</h3>
+                            <div class="clear"></div> 
+                            <!-- text-->
+                            <span>
+                               Сайт допомоги учасникам АТО працює за такими напрямками:<br>
+                               1. Статуси УБД, нагороди, фінансові виплати.<br> 
+                               2. Виплати за поранення, сім'ям загиблих, банківські кредити.<br> 
+                               3. Земельні ділянки, квартири, освіта.<br> 
+                               4. Реабілітація, санаторії, безкоштовні ліки, щорічний медогляд.<br> 
+                               5. Працевлаштування.<br>
+							</span>
+                        </div>
+                    </div>        
+                </div>
+                <div class="box-three featured-box-sub">
+                    <div>
+                        <div>
+                            <!-- sub featured title -->
+                            <h3>Юридичні контакти:</h3>
+                            <div class="clearfix"></div> 
+                            <!-- list with image -->
+                          <ul>
+                                <li>
+                                    <!-- <img src="images/temp/bullet_list1.jpg" alt="" width="55" height="55" /> -->
+                                    <span><a href="http://legal100.org.ua/?page_id=22" target="_blank">ГО “Юридична Сотня” надає юридичні консультації та забезпечує правовий супровід учасникам АТО на безоплатній основі.</a></span>
+                                    <span class="times-gray-italic-13">(093) 029-11-91</span>
+                                    <span class="times-gray-italic-13">(095) 796-32-19</span>
+                                    <span><a href="http://legal100.org.ua/?page_id=22" target="_blank">Служба Безпеки України </a></span>
+                                    <span class="times-gray-italic-13">(044)2555057</span>
+                                     <span><a href="http://legal100.org.ua/?page_id=22" target="_blank">Служба зовнішньої розвідки України </a></span>
+                                    <span class="times-gray-italic-13">(044)481-62-09</span>
+                              </li>
+
+                            </ul>
+                            <!-- /list with image -->
+                        </div>
+                    </div>       
+                </div>
+                <div class="box-three featured-box-sub">
+                    <div>
+                        <div>
+                            <!-- sub featured title -->
+                            <h3>Гарячі лінії:</h3>
+                            <div class="clear"></div> 
+                            <!-- text-->
+                            <span>
+                                <!--<p> for ie 7 fix. works well with others too-->
+                                 <span><a href="http://www.mil.gov.ua/kontakti/garyacha-liniya.html" target="_blank">Call-центр Міноборони</a><span class="times-gray-italic-13">0 800 50 04 42</span></span>
+                                 <span><a  href="http://www.mil.gov.ua/kontakti/garyacha-liniya.html" target="_blank">«Гаряча лінія» Департаменту фінансів Міноборони з питань грошового забезпечення та соціальних виплат</a><span class="times-gray-italic-13">(044) 271-12-57</span></span>
+                                 <span><a  href="http://www.mil.gov.ua/kontakti/garyacha-liniya.html" target="_blank">«Гаряча лінія» Відділу по роботі з громадянами та доступу до публічної інформації</a><span class="times-gray-italic-13">(044) 253-04-71</span></span>
+                            </span>
+                        </div>
+                    </div>        
+                </div>       
+            </div>             
+            <!-- /three box footer-->        
+        </div>
+        <!-- /content container-->
+    
+        <div class="clear20"></div>
+        
+        <!--footer-->
+        <div id="footer_container">
+            <div id="footer" class="center-clear">
+                <ul>
+                    <li><a href="index.html" class="active">Головна</a></li>
+                    <li><a href="maps.html">Карта</a></li>
+                    <li><a href="#">Пільги</a></li>
+                    <li><a href="#">Освіта</a></li>
+                    <li><a href="#">Лікування</a></li>
+                    <li><a href="contact.html">Контакти</a></li>
+                    <li><a href="comens.html">Kоментарі</a></li>
+                </ul>
+                <div>Інформаційний сайт - Твої права.Життя після АТО.
+                </div>
+            </div>
+        </div>
+        <!-- /footer-->
+	
+    </div>        
+</body>
+<!-- /body -->
+
+</html>

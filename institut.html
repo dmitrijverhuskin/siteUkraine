@@ -1,0 +1,394 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Вищи навчальні заклади</title>
+<link href='http://fonts.googleapis.com/css?family=Terminal+Dosis:400,700,800,600,500,300,200' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<link rel="stylesheet" type="text/css" href="css/default.css"/>
+<link rel="shortcut icon" href="icon.ico" type="image/i-icon" />
+
+<!--jquery library-->
+<script type="text/javascript" src="scripts/jquery-1.7.1.min.js"></script>
+<!--/jquery library-->
+
+<!--jquery easing-->
+<script type="text/javascript" src="scripts/jquery.easing.1.3.js"></script>
+<!--/jquery easing-->
+
+<!--nivo slider plugin for jquery-->
+<script type="text/javascript" src="scripts/nivo-slider/jquery.nivo.slider.js"></script>
+<link rel="stylesheet" type="text/css" href="scripts/nivo-slider/nivo-slider.css"/>
+<!--/ nivo slider plugin for jquery-->
+
+<!--superfish dropdown-->
+<link rel="stylesheet" type="text/css" href="scripts/superfish/css/superfish.css"/>
+<script type="text/javascript" src="scripts/superfish/js/superfish.js"></script>
+<script type="text/javascript" src="scripts/superfish/js/hoverIntent.js"></script>
+<script type="text/javascript" src="scripts/superfish/js/jquery.bgiframe.min.js"></script>
+<script type="text/javascript" src="scripts/superfish/js/supersubs.js"></script>
+<!--/superfish dropdown-->
+
+<!--auto complete-->
+<script type='text/javascript' src='scripts/autocomplete/jquery.autocomplete.min.js'></script>
+<link rel="stylesheet" type="text/css" href="scripts/autocomplete/jquery.autocomplete.css" />
+<!--/auto complete-->
+
+<!--misc. scripts-->
+<script type="text/javascript" src="scripts/scripts.js"></script>
+<!--/misc. scripts-->
+<script type="text/javascript">
+
+$(document).ready(function(e) {
+	$('#slider').nivoSlider({ effect: 'random',useTransparentBg:false });	
+	
+	$("#nivo_slider_previous").click(function(){$(".nivo-directionNav .nivo-prevNav").click();return false;})
+	$("#nivo_slider_next").click(function(){$(".nivo-directionNav .nivo-nextNav").click();return false;})
+	
+	$("#slider4").horizontalSlider({nextBtn:$("#projects_slider_next"),previousBtn:$("#projects_slider_previous"),slidingDiv:".sliding-div"});
+	
+}),500;
+</script>
+
+<!--nivor slider theme-->
+<link rel="stylesheet" type="text/css" href="scripts/nivo-slider/themes/project-details/big.css"/>
+<!--/nivo slider theme-->
+
+<script type="text/javascript"> 
+    document.ondragstart = noselect; // запрет на перетаскивание
+    document.onselectstart = noselect; // запрет на выделение элементов страницы 
+    document.oncontextmenu = noselect; // запрет на выведение контекстного меню 
+    function noselect() {return false;} 
+</script>
+
+</head>
+
+<!--body-->
+<body onmousedown="return false;" onclick="return true;">
+	<!--sliding login panel-->
+	<div id="login_panel">
+        <div id="content">
+            <div>
+                <div class="column column1">
+                    <!--help text, maybe-->
+                    <h3>Інформаційний сайт для учасників бойових дій:</h3>
+                    <p>
+                      Сайт призначений для надання інформаційної підтримки учасникам бойових дій АТО. Містить базу інформації про реабілітацію, освіту та пільги.
+                    </p>
+                    <p>
+                        Для того, щоб залишати свої коментарі та пропозиції на сайті необхідно пройти реєстрацію.  
+                    </p>                    
+                    <p>
+                        <a href="#" class="orange-only notextdecoration">Ще не зареєстровані ? Зареєструватись ?</a>
+                    </p>
+                
+                </div>
+                                
+                <div class="column column2">
+                    <!--user signin-->
+                    <h3>Вхід на сайт:</h3>
+                    <form name="contact_form" id="contact_form" class="generic-form alignleft_block" action="contact.html">
+                        <p>
+                            <input type="text" name="txt_name" id="txt_name" class="validate[required] medium-login user margin-right-10" />
+                            <input type="text" name="txt_email" id="txt_email" class="validate[required] medium-login password" />
+                        </p>
+                        <div class="clear10"></div>                                                
+                        <p>
+                            <input type="checkbox" id="chk_rememberme" name="chk_rememberme" /><label for="chk_rememberme">Запам'ятати мене</label>
+                            &nbsp;/&nbsp;
+                            <a href="#" class="orange-only notextdecoration">Нагадати пароль?</a>
+                        </p>                     
+                           
+                        <div class="clear"></div>
+                        
+                        <a href="#" class="button alignleft_block bold_only notextdecoration" id="btnLoginNow"><span>Увійти</span></a>
+
+                    </form>
+                    <!--/user login-->
+                </div>
+            </div>
+        </div>
+        <div id="signin_register">
+            <ul>
+                <li>Вітаємо на сайті!</li>
+                <li><a href="#">&nbsp;</a></li>
+            </ul>
+        </div>
+    </div>    
+    <!--/sliding login panel-->
+    <!--top anchor-->
+    <a name="top"></a>
+    
+    <!--body wrapper-->
+    <div id="body-wrapper">
+    
+    	<div id="page-header-wrapper">
+    
+            <!--header container-->
+            <div id="header-contanier">    
+            
+                <!--header wrapper-->
+                <div id="header" class="center-clear">
+                    
+                    <img class="banner" src="images/temp/47776.jpg" width="970" height="250" alt="banner" />
+                                
+                    <!--header place holder-->
+                    <div class="header-place-holder"></div>
+                    
+                    <!--social tabs-->
+                   <ul id="social_tabs">
+                    <li><a href="https://twitter.com/vsedopomogaATO" target="_blank"><img src="images/social_icons/t.png" width="30" height="27" alt="" /></a></li>
+                    <li><a href="https://www.facebook.com/vsedopomogaATO" target="_blank"><img src="images/social_icons/f.png" width="30" height="27" alt="" /></a></li>
+                    <li><a href="http://vk.com/vsedopomogaato" target="_blank"><img src="images/social_icons/v.png" width="30" height="27" alt="" /></a></li>
+                   </ul>
+                    <!-- /social tabs-->
+
+                    <!--menu-->
+                    <ul id="top_menu" class="sf-menu">
+                    <li><a href="index.html">Головна</a><span>Початок сайту</span></li>
+                    <li><a href="#.html">Карта</a><span>З чого потрібно почати</span>
+                        <!--first level dropdown menu-->
+                        <ul>
+                            <li><a href="maps.html">Документи</a></li>
+                            <li><a href="social_sl.html">Соціальні служби</a></li>
+                            <li><a href="famile.html">Діти сім'я</a></li>                                                         
+                        </ul>
+                        <!--/first level dropdown menu-->                        
+                    </li>
+                    <li><a href="#">Пільги</a><span>Необхідні данні</span>
+                        <!--first level dropdown menu-->
+                        <ul>
+                             <li><a href="#">Земельне законодавство</a></li>
+                             <li><a href="#">Отримання статусу</a>
+                                <!--second level dropdown menu-->
+                                <ul>
+                                    <li><a href="#">Демобілізований</a></li>            
+                                    <li><a href="#">Сім'я загиблого</a></li>
+                                </ul>
+                                 <!--/second level dropdown menu-->
+                             </li>
+                             <li><a href="#">Отримання житла</a></li>
+                             <li><a href="#">Податкове законодавство</a></li>
+                             <li><a href="#">Отримання кредитів</a></li>
+                             <li><a href="#">Виплати</a></li>                                 
+                             <li><a href="#">Юридична допомога</a></li>
+                             <li><a href="#">Волонтерські організації<br>(контакти)</a></li>                                 
+                        </ul>
+                        <!--/first level dropdown menu-->                        
+                    </li>
+                    <li><a href="#">Освіта</a><span>Що потрібно знати</span>
+                        <!--first level dropdown menu-->
+                        <ul>
+                            <li><a href="#">Закон про освіту</a></li>
+                            <li><a href="institut.html">Вищі навчальні заклади</a></li>
+                        </ul>
+                        <!--/first level dropdown menu-->                        
+                    </li>
+                    <li><a href="#">Лікування</a><span>Відпочинок</span>
+                        <!--first level dropdown menu-->
+                        <ul>
+                            <li><a href="#">Закон про лікування</a></li>
+                            <li><a href="#">Психологічна реабілітація</a></li>
+                            <li><a href="#">Санаторне лікування</a></li>
+                        </ul>
+                        <!--/first level dropdown menu-->                        
+                    </li>                                                                
+                    <li><a href="contact.html">Контакти</a><span>Необхідні контакти</span></li> 
+                    <li><a href="comens.html">Kоментарі</a><span>Ваші конентарі</span></li>         
+                </ul>
+                    <!-- /menu-->
+                    
+                    <!--search box-->
+                    <div id="search_box">
+                        <form method="post" name="form_search" id="form_search" class="form_search" action="all_elements.html">
+                            <input type="text" name="txt_search" id="txt_search" class="txt_search" value="Пошук..." />
+                            <input type="submit" name="btn_search" id="btn_search" class="btn_search" value="" />
+                        </form>
+                    </div>
+                    <!-- /search box-->
+                    
+                </div>
+                <!-- /header wrapper-->
+                
+            </div>
+            <!-- /header container-->
+
+	        <div class="clear40"></div>
+                  
+            
+            <!--bread crumb-->
+            <div class="center-clear">
+                <div id="breadcrumb" class="page-columns-head-style gray-frame">
+                    <ul>
+                        <li><a href="index.html">Головна</a></li>
+                        <li><a href="#">Освіта</a></li>                        
+                        <li><a href="institut.html" class="active">Вищі навчальні заклади</a></li>
+                    </ul>
+                </div>
+			</div>                
+            <!--/bread crumb-->
+            
+        </div>
+        <!--/page header wrapper-->
+        
+        
+        <!--page content wrapper-->
+        <div id="page-content-wrapper">        
+        
+            <!--content container-->
+            <div class="center-clear page-content-wrapper">
+                
+                <div class="page-content gray-frame alignleft_block full-content-width">
+                    <!--inner title-->
+                    <h2 class="heading h2">Деякі посилання:</h2>
+                    <!--/inner title-->
+                    
+					<div class="clear"></div>                    
+                    
+					<!--block-->
+                    <div class="project-details full-content-width alignleft_block">
+                        <div class="alignleft_block margin-right-20 left_part">
+
+							<div class="clear10"></div>
+	
+                            <ul class="page-list-menu clean-li">
+                                <li><a href="http://mon.gov.ua/activity/dlya-uchasnikiv-ato.html" target="_blank">Міністерство освіти України</a></li>
+                                <li><a href="http://zakon5.rada.gov.ua/laws/show/291-19" target="_blank">Закон про освіту</a></li>
+                                <li><a href="http://life.pravda.com.ua/society/2015/05/14/193906/" target="_blank">Дітям військових</a></li>
+                                <li><a href="http://pon.org.ua/novyny/4204-socialna-stipendiya-dityam-uchasnikiv-ato.html" target="_blank">Соціальна стипендія дітям</a></li>
+                                 <li><a href="http://dubil.org/news/sotsialnoi-sfery/722-yaki-pilgi-na-navchannya-mayut-diti-uchasnikiv-ato-i-diti-z-bagatoditnikh-simej.html" target="_blank">Які пільги на навчання мають діти учасників АТО</a></li>
+                                 <li><a href="https://lpl.com.ua/ua/home/helpfulinformationdetails/48" target="_blank">Варто знати</a></li>
+                            </ul>
+                            
+                            <div class="clear40"></div>
+                            
+                            <!--related projects-->
+                      
+							<div class="related-projects-slider alignleft_block" id="slider4">
+                            
+                                <div class="alignleft_block margin_bottom10">
+                                    <div>
+	                                    <h2 class="heading h2">Навчальні заклади</h2>
+                                        <div class="alignright_block sliding-div-navigation">
+                                            <a href="#" id="projects_slider_previous" class="slider-arrows slider-previous">Попередня</a>
+                                            <a href="#" id="projects_slider_next" class="slider-arrows slider-next">Наступна</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            	<div class="sliding-div">
+                                	<!--slide-->
+                                    <div>
+                                        <img src="images/temp/07.png" width="210" height="148" class="gray-frame padding-5"/>
+                                        <!--title-->
+                                        <h3 class="heading h3">КНУ імені Тараса Шевченко</h3>
+                                        <!--/title-->
+                                        <p style="text-align: justify">
+                                            В університеті працює 13 факультетів, 8 навчальних інститутів, 1 навчально-науковий центр, підготовче відділення, Центр українознавства, геологічний та зоологічний музеї, Музей історії університету, Міжфакультетський лінгвістичний музей, Інформаційно-обчислювальний центр, Астрономічна обсерваторія, Видавничо-поліграфічний центр та Наукова бібліотека.                                      
+                                        </p>
+                                    </div>
+                                	<!--/slide-->                                    
+                                    
+                                	<!--slide-->
+                                    <div>
+                                        <img src="images/temp/01.png" width="210" height="148" class="gray-frame padding-5"/>
+    
+                                        <!--title-->
+                                        <h3 class="heading h3">НТУУ «КПІ»</h3>
+                                        <!--/title-->
+                                        <p style="text-align: justify">
+                                            Націона́льний техні́чний університе́т Украї́ни «Ки́ївський політехні́чний інститу́т» — вищий навчальний заклад інженерного профілю, дослідницький університет, заснований в Києві у 1898 р, на сьогодні це найбільший університет України за кількістю студентів з широким спектром спеціальностей і спеціалізацій для підготовки фахівців з технічних і гуманітарних наук.                                      
+                                        </p>
+                                    </div>
+                                	<!--/slide-->
+
+                                	<!--slide-->                               
+                                    <div>
+                                        <img src="images/temp/02.jpg" width="210" height="148" class="gray-frame padding-5"/>
+                                        <!--title-->
+                                        <h3 class="heading h3">Національний авіаційний університет (м. Київ)</h3>
+                                        <!--/title-->
+                                        <p style="text-align: justify">
+                                            Національний авіаційний університет — авіаційний вищий навчальний заклад в Києві. Від 2010 р. самоврядний (автономний) дослідницький національний університет. В НАУ навчається понад 50 тисяч студентів із 49 країн світу.                                      
+                                        </p>
+                                    </div> 
+                                	<!--/slide-->
+                                   </div>                                                                  
+                                </div>
+                                
+
+                            <!--/related projects-->                         
+                        </div>
+                             <h1 class="heading h1">Проведення IT курсів для воїнів АТО:</h1>
+                        <div class="alignleft_block right_part">
+                            <!--title-->
+                            <!-- <h3 class="heading h3">Проведення курсів для воїнів АТО</h3> -->
+                            <!--/title-->
+                            <!-- <div class="clear10"></div> -->
+                            <!--content-->
+                            <p style="text-align: justify">
+                                Київського національного університету імені Тараса Шевченка, Національного технічного університету України “Київський політехнічний інститут”, Національного авіаційного університету (м. Київ), Кам’янець-Подільського національного університету імені Івана Огієнка, Кіровоградського державного педагогічного університету імені Володимира Винниченка, Луцького національного технічного університету, Наукового Товариства Одеського державного екологічного університету, Національного уніве рситету водного господарства та природокористування (м. Рівне), ГО "Старокостянтинів небайдужий" та Старокостянтинівського НВК "Спеціалізована школа І ступеня, гімназія" імені Сергія Бондарчука (м. Старокостянтинів, Хмельницької обл.), Тернопільського національного технічного університету імені Івана Пулюя та Стартап центру ТНТУ ім. І. Пулюя, Технічного коледжу ТНТУ ім. І. Пулюя, Національного технічного університету “Харківський політехнічний університет”, Харківського національного університету радіоелектроніки, Ужгородського національного університету, Українського Католицького Університету, Вільного простору “Майстерня” (м. Бахмут, Донецької області), учбового центру LevelUp та “IT-рух Дніпро” (м. Дніпропетровськ), Міжнародної біржі фрілансу Proffstore (м. Київ), школи програмування Ш++(м. Кіровоград), LITS | Lviv IT School (м. Львів), компанії Teamvoy - Software Engineers & Consultants (м. Львів), компані ї TranSoftGroup (м. Мукачево, Закарпатської обл.), IHUB Chernihiv (м. Чернігів).
+                            </p>
+
+
+                            <div class="gray-frame padding-5 padding-bottom-30">
+                                <div id="slider" class="project-big-slider ">
+                                    <img src="images/temp/01.jpg" width="688" height="548"/>
+                                    <img src="images/temp/03.jpg" width="688" height="548"/>
+                                    <img src="images/temp/04.jpg" width="688" height="548"/>
+                                    <img src="images/temp/05.jpg" width="688" height="548"/>
+                                </div>
+    
+                                <div class="alignright_block margin-top-5">
+                                    <a href="#" id="nivo_slider_previous" class="slider-arrows slider-previous">Попередня</a>
+                                    <a href="#" id="nivo_slider_next" class="slider-arrows slider-next">Наступна</a>                            
+                                </div>
+                            </div>
+                            
+                            <div class="clear10"></div>
+							
+                            <div class="clear"></div>
+                            
+                            <div class="hr"></div>
+                            
+                            <!--/content-->
+                             
+                          	<div class="clear10"></div>
+                        </div>
+                    </div>
+                    <!--/block-->
+
+                </div>
+                
+            </div>
+            <!-- /content container-->
+    	
+            <div class="clear40"></div>
+
+        </div>
+        <!--/page content wrapper-->
+
+		 <!--footer-->
+        <div id="footer_container">
+            <div id="footer" class="center-clear">
+                <ul>
+                    <li><a href="index.html" class="active">Головна</a></li>
+                    <li><a href="maps.html">Карта</a></li>
+                    <li><a href="#">Пільги</a></li>
+                    <li><a href="#">Освіта</a></li>
+                    <li><a href="#">Лікування</a></li>
+                    <li><a href="contact.html">Контакти</a></li>
+                    <li><a href="comens.html">Kоментарі</a></li>
+                </ul>
+                 <div>Інформаційний сайт - Твої права.Життя після АТО.</div>
+            </div>
+        </div>
+        <!-- /footer-->
+    
+    </div>
+    <!--/body wrapper-->    
+</body>
+<!-- /body -->
+
+</html>
